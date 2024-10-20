@@ -1,0 +1,13 @@
+# store your development credentials for spring app here
+# this file should and will not be checked into version control
+SSMS:
+  common:
+    sentry-dsn: https://61ec95763d22ef304b11bc25b4b6d70f@o4508115831160832.ingest.us.sentry.io/4508115835420672
+  signing-secret: f3bb9ba913f0428d8586aea07ffb9144
+  intercom-access-token: YOUR-INTERCOM-ACCESS-TOKEN
+  aliyun-access-key: LTAI5tK46ifstsHUbCryiZCg
+  aliyun-access-secret: o4G6WvPQMl4k8ZTkMDp4M8tB49wsL2
+  intercom-app-id: YOUR-INTERCOM-APP-ID
+  intercom-signing-secret: YOUR-INTERCOM-SIGNING-SECRET
+  recaptcha-public: YOUR-RECAPTCHA-PUBLIC
+  recaptcha-private: YOUR-RECAPTCHA-PRIVATE
