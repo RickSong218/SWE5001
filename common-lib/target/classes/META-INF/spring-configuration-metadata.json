@@ -1,21 +1,21 @@
 {
   "groups": [
     {
-      "name": "staffjoy.common",
-      "type": "xyz.staffjoy.common.config.StaffjoyProps",
-      "sourceType": "xyz.staffjoy.common.config.StaffjoyProps"
+      "name": "SSMS.common",
+      "type": "com.SSMS.common.config.SSMSProps",
+      "sourceType": "com.SSMS.common.config.SSMSProps"
     }
   ],
   "properties": [
     {
-      "name": "staffjoy.common.deploy-env",
+      "name": "SSMS.common.deploy-env",
       "type": "java.lang.String",
-      "sourceType": "xyz.staffjoy.common.config.StaffjoyProps"
+      "sourceType": "com.SSMS.common.config.SSMSProps"
     },
     {
-      "name": "staffjoy.common.sentry-dsn",
+      "name": "SSMS.common.sentry-dsn",
       "type": "java.lang.String",
-      "sourceType": "xyz.staffjoy.common.config.StaffjoyProps"
+      "sourceType": "com.SSMS.common.config.SSMSProps"
     }
   ],
   "hints": []
