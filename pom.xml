@@ -19,10 +19,11 @@
  
     <modules>
         <module>common-lib</module>
+        <!--<module>account-api</module>-->
         <!--<module>account-svc</module>-->
         <!--<module>account-api</module>-->
-        <!--<module>company-api</module>-->
-        <!--<module>company-svc</module>-->
+        <module>company-api</module>
+        <module>company-svc</module>
         <!--<module>mail-api</module>-->
         <!--<module>mail-svc</module>-->
         <!--<module>sms-svc</module>-->
