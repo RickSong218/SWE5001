@@ -7,21 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="company-svc (1) (com.SSMS)" />
         <module name="company-api" />
         <module name="common-lib" />
-        <module name="company-svc (1) (com.SSMS)" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="company-svc" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="SSMS-parent" options="-parameters" />
       <module name="common-lib" options="-parameters" />
-      <module name="company-api" options="-parameters" />
-      <module name="company-svc" options="-parameters" />
+      <module name="company-api" options="" />
+      <module name="company-svc" options="" />
       <module name="company-svc (1) (com.SSMS)" options="-parameters" />
     </option>
   </component>
