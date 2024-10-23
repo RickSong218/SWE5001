@@ -12,7 +12,7 @@
     </parent>
  
     <artifactId>common-lib</artifactId>
-    <name>Staffjoy-Common-Library</name>
+    <name>SSMS-Common-Library</name>
     <version>1.0.1</version>
 
     <dependencies>

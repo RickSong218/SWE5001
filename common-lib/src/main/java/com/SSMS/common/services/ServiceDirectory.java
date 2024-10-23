@@ -7,9 +7,9 @@ import java.util.TreeMap;
 /**
  * ServiceDirectory allows access to a backend service using its subdomain
  *
- * StaffjoyServices ia a map of subdomains -> specs
+ * SSMSServices ia a map of subdomains -> specs
  * Subdomain is <string> + Env["rootDomain"]
- * e.g. "login" service on prod is "login" + "staffjoy.xyz"
+ * e.g. "login" service on prod is "login" + "SSMS.xyz"
  *
  * KEEP THIS LIST IN ALPHABETICAL ORDER PLEASE
  */

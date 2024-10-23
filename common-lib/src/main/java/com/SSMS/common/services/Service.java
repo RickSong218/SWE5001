@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * Service is an app on Staffjoy that runs on a subdomain
+ * Service is an app on SSMS that runs on a subdomain
  */
 @Data
 @NoArgsConstructor
