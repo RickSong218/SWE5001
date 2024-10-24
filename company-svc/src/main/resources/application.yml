@@ -16,7 +16,7 @@ spring:
     hibernate:
       ddl-auto: validate
 
-SSMS:
+ssms:
   common:
     sentry-dsn: ${SENTRY_DSN}
     deploy-env: ${DEPLOY:V2}

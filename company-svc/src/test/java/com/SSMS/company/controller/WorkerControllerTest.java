@@ -1,5 +1,9 @@
 package com.SSMS.company.controller;
 
+import com.SSMS.company.dto.GetWorkerOfResponse;
+import com.SSMS.company.dto.ListWorkerResponse;
+import com.SSMS.company.dto.WorkerDto;
+import com.SSMS.company.dto.WorkerEntries;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.After;
 import org.junit.Before;
@@ -19,7 +23,6 @@ import com.SSMS.common.api.ResultCode;
 import com.SSMS.common.auth.AuthConstant;
 import com.SSMS.company.TestConfig;
 import com.SSMS.company.client.CompanyClient;
-import com.SSMS.company.dto.*;
 import com.SSMS.company.repo.WorkerRepo;
 
 import java.util.Optional;

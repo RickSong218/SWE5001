@@ -1,4 +1,4 @@
-package com.SSMS.common.api;
+package com.ssms.common.api;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,9 +12,9 @@ import lombok.NoArgsConstructor;
 public class BaseResponse {
     private String message;
     @Builder.Default
-    private ResultCode code = ResultCode.SUCCESS;
+    private com.ssms.common.api.ResultCode code = com.ssms.common.api.ResultCode.SUCCESS;
 
     public boolean isSuccess() {
-        return code == ResultCode.SUCCESS;
+        return code == com.ssms.common.api.ResultCode.SUCCESS;
     }
 }

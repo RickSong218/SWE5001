@@ -1,4 +1,4 @@
-package com.SSMS.common.auth;
+package com.ssms.common.auth;
 
 import org.springframework.util.StringUtils;
 import org.springframework.web.method.HandlerMethod;
@@ -25,11 +25,11 @@ public class AuthorizeInterceptor extends HandlerInterceptorAdapter {
         String authzHeader = request.getHeader(AuthConstant.AUTHORIZATION_HEADER);
 
         if (StringUtils.isEmpty(authzHeader)) {
-            throw new PermissionDeniedException(AuthConstant.ERROR_MSG_MISSING_AUTH_HEADER);
+            throw new com.ssms.common.auth.PermissionDeniedException(AuthConstant.ERROR_MSG_MISSING_AUTH_HEADER);
         }
 
         if (!Arrays.asList(allowedHeaders).contains(authzHeader)) {
-            throw new PermissionDeniedException(AuthConstant.ERROR_MSG_DO_NOT_HAVE_ACCESS);
+            throw new com.ssms.common.auth.PermissionDeniedException(AuthConstant.ERROR_MSG_DO_NOT_HAVE_ACCESS);
         }
 
         return true;

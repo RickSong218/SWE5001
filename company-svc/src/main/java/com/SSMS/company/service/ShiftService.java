@@ -1,20 +1,21 @@
-package com.SSMS.company.service;
+package com.ssms.company.service;
 
+import com.ssms.company.dto.*;
 import com.github.structlog4j.ILogger;
 import com.github.structlog4j.SLoggerFactory;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
-import com.SSMS.bot.dto.AlertNewShiftRequest;
-import com.SSMS.bot.dto.AlertRemovedShiftRequest;
-import com.SSMS.common.auditlog.LogEntry;
-import com.SSMS.common.auth.AuthContext;
-import com.SSMS.company.dto.*;
-import com.SSMS.company.model.Shift;
-import com.SSMS.company.repo.ShiftRepo;
-import com.SSMS.company.service.helper.ServiceHelper;
-import com.SSMS.company.service.helper.ShiftHelper;
+import com.ssms.bot.dto.AlertNewShiftRequest;
+import com.ssms.bot.dto.AlertRemovedShiftRequest;
+import com.ssms.common.auditlog.LogEntry;
+import com.ssms.common.auth.AuthContext;
+import com.ssms.company.dto.*;
+import com.ssms.company.model.Shift;
+import com.ssms.company.repo.ShiftRepo;
+import com.ssms.company.service.helper.ServiceHelper;
+import com.ssms.company.service.helper.ShiftHelper;
 
 import java.time.Instant;
 import java.util.*;

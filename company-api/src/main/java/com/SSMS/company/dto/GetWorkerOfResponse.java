@@ -1,7 +1,7 @@
-package com.SSMS.company.dto;
+package com.ssms.company.dto;
 
 import lombok.*;
-import com.SSMS.common.api.BaseResponse;
+import com.ssms.common.api.BaseResponse;
 
 @Getter
 @Setter
@@ -10,5 +10,5 @@ import com.SSMS.common.api.BaseResponse;
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
 public class GetWorkerOfResponse extends BaseResponse {
-    private WorkerOfList workerOfList;
+    private com.ssms.company.dto.WorkerOfList workerOfList;
 }

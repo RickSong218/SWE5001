@@ -1,4 +1,4 @@
-package com.SSMS.common.services;
+package com.ssms.common.services;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * Service is an app on SSMS that runs on a subdomain
+ * Service is an app on ssms that runs on a subdomain
  */
 @Data
 @NoArgsConstructor

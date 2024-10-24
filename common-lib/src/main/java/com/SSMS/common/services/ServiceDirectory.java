@@ -1,4 +1,4 @@
-package com.SSMS.common.services;
+package com.ssms.common.services;
 
 import java.util.Collections;
 import java.util.Map;
@@ -7,9 +7,9 @@ import java.util.TreeMap;
 /**
  * ServiceDirectory allows access to a backend service using its subdomain
  *
- * SSMSServices ia a map of subdomains -> specs
+ * ssmsServices ia a map of subdomains -> specs
  * Subdomain is <string> + Env["rootDomain"]
- * e.g. "login" service on prod is "login" + "SSMS.com"
+ * e.g. "login" service on prod is "login" + "ssms.com"
  *
  * KEEP THIS LIST IN ALPHABETICAL ORDER PLEASE
  */

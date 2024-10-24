@@ -1,4 +1,4 @@
-package com.SSMS.company.service;
+package com.ssms.company.service;
 
 import com.github.structlog4j.ILogger;
 import com.github.structlog4j.SLoggerFactory;
@@ -7,11 +7,11 @@ import org.apache.tomcat.jni.Directory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
-import com.SSMS.common.auth.AuthContext;
-import com.SSMS.common.auth.PermissionDeniedException;
-import com.SSMS.company.model.Worker;
-import com.SSMS.company.repo.WorkerRepo;
-import com.SSMS.company.service.helper.ServiceHelper;
+import com.ssms.common.auth.AuthContext;
+import com.ssms.common.auth.PermissionDeniedException;
+import com.ssms.company.model.Worker;
+import com.ssms.company.repo.WorkerRepo;
+import com.ssms.company.service.helper.ServiceHelper;
 
 
 @Service

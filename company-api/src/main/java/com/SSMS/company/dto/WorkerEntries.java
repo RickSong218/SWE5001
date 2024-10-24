@@ -1,4 +1,4 @@
-package com.SSMS.company.dto;
+package com.ssms.company.dto;
 
 import lombok.*;
 

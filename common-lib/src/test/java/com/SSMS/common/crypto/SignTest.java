@@ -1,4 +1,4 @@
-package com.SSMS.common.crypto;
+package com.ssms.common.crypto;
 
 import com.auth0.jwt.exceptions.SignatureVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;

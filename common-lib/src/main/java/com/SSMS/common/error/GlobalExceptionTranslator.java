@@ -1,4 +1,4 @@
-package com.SSMS.common.error;
+package com.ssms.common.error;
 
 import com.github.structlog4j.ILogger;
 import com.github.structlog4j.SLoggerFactory;
@@ -14,9 +14,9 @@ import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 import org.springframework.web.servlet.NoHandlerFoundException;
-import com.SSMS.common.api.BaseResponse;
-import com.SSMS.common.api.ResultCode;
-import com.SSMS.common.auth.PermissionDeniedException;
+import com.ssms.common.api.BaseResponse;
+import com.ssms.common.api.ResultCode;
+import com.ssms.common.auth.PermissionDeniedException;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
@@ -128,8 +128,8 @@ public class GlobalExceptionTranslator {
                 .build();
     }
 
-    @ExceptionHandler(ServiceException.class)
-    public BaseResponse handleError(ServiceException e) {
+    @ExceptionHandler(com.ssms.common.error.ServiceException.class)
+    public BaseResponse handleError(com.ssms.common.error.ServiceException e) {
         logger.error("Service Exception", e);
         return BaseResponse
                 .builder()

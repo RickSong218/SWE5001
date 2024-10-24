@@ -1,11 +1,11 @@
-package com.SSMS.common.crypto;
+package com.ssms.common.crypto;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import org.springframework.util.StringUtils;
-import com.SSMS.common.error.ServiceException;
+import com.ssms.common.error.ServiceException;
 
 import java.util.Date;
 import java.util.HashMap;

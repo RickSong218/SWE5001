@@ -1,4 +1,4 @@
-package com.SSMS.common.api;
+package com.ssms.common.api;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

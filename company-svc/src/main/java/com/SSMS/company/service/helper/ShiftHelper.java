@@ -1,4 +1,4 @@
-package com.SSMS.company.service.helper;
+package com.ssms.company.service.helper;
 
 import com.github.structlog4j.ILogger;
 import com.github.structlog4j.SLoggerFactory;
@@ -6,14 +6,14 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
-import com.SSMS.common.api.ResultCode;
-import com.SSMS.common.auditlog.LogEntry;
-import com.SSMS.common.auth.AuthContext;
-import com.SSMS.common.error.ServiceException;
-import com.SSMS.company.dto.ShiftDto;
-import com.SSMS.company.model.Shift;
-import com.SSMS.company.repo.ShiftRepo;
-import com.SSMS.company.service.JobService;
+import com.ssms.common.api.ResultCode;
+import com.ssms.common.auditlog.LogEntry;
+import com.ssms.common.auth.AuthContext;
+import com.ssms.common.error.ServiceException;
+import com.ssms.company.dto.ShiftDto;
+import com.ssms.company.model.Shift;
+import com.ssms.company.repo.ShiftRepo;
+import com.ssms.company.service.JobService;
 
 @Component
 public class ShiftHelper {

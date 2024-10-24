@@ -1,18 +1,17 @@
-package com.SSMS.company.config;
+package com.ssms.company.config;
 
-import com.SSMS.common.config.SSMSRestConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
-import com.SSMS.common.async.ContextCopyingDecorator;
+import com.ssms.common.async.ContextCopyingDecorator;
 
 import java.util.concurrent.Executor;
 
 @Configuration
 @EnableAsync
-@Import(value = {SSMSRestConfig.class})
+@Import(value = {com.ssms.common.config.ssmsRestConfig.class})
 @SuppressWarnings(value = "Duplicates")
 public class AppConfig {
 

@@ -1,4 +1,4 @@
-package com.SSMS.company.service.helper;
+package com.ssms.company.service.helper;
 
 import com.github.structlog4j.ILogger;
 import com.github.structlog4j.SLoggerFactory;
@@ -7,16 +7,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
-import com.SSMS.account.client.AccountClient;
-import com.SSMS.account.dto.TrackEventRequest;
-import com.SSMS.bot.client.BotClient;
-import com.SSMS.bot.dto.*;
-import com.SSMS.common.api.BaseResponse;
-import com.SSMS.common.auth.AuthContext;
-import com.SSMS.common.env.EnvConfig;
-import com.SSMS.common.error.ServiceException;
-import com.SSMS.company.config.AppConfig;
-import com.SSMS.company.dto.ShiftDto;
+import com.ssms.account.client.AccountClient;
+import com.ssms.account.dto.TrackEventRequest;
+import com.ssms.bot.client.BotClient;
+import com.ssms.bot.dto.*;
+import com.ssms.common.api.BaseResponse;
+import com.ssms.common.auth.AuthContext;
+import com.ssms.common.env.EnvConfig;
+import com.ssms.common.error.ServiceException;
+import com.ssms.company.config.AppConfig;
+import com.ssms.company.dto.ShiftDto;
 
 import java.time.Instant;
 import java.util.List;

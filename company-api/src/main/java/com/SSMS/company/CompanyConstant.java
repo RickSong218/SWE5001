@@ -1,4 +1,4 @@
-package com.SSMS.company;
+package com.ssms.company;
 
 public class CompanyConstant {
 

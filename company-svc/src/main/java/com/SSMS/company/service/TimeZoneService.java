@@ -1,7 +1,7 @@
-package com.SSMS.company.service;
+package com.ssms.company.service;
 
 import org.springframework.stereotype.Service;
-import com.SSMS.company.dto.TimeZoneList;
+import com.ssms.company.dto.TimeZoneList;
 
 import java.util.TimeZone;
 

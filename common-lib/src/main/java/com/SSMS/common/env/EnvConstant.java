@@ -1,4 +1,4 @@
-package com.SSMS.common.env;
+package com.ssms.common.env;
 
 public class EnvConstant {
     public static final String ENV_DEV = "dev";

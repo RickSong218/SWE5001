@@ -1,20 +1,20 @@
-package com.SSMS.company.service;
+package com.ssms.company.service;
 
 import com.github.structlog4j.ILogger;
 import com.github.structlog4j.SLoggerFactory;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.SSMS.common.api.ResultCode;
-import com.SSMS.common.auditlog.LogEntry;
-import com.SSMS.common.auth.AuthContext;
-import com.SSMS.common.error.ServiceException;
-import com.SSMS.company.dto.CreateJobRequest;
-import com.SSMS.company.dto.JobDto;
-import com.SSMS.company.dto.JobList;
-import com.SSMS.company.model.Job;
-import com.SSMS.company.repo.JobRepo;
-import com.SSMS.company.service.helper.ServiceHelper;
+import com.ssms.common.api.ResultCode;
+import com.ssms.common.auditlog.LogEntry;
+import com.ssms.common.auth.AuthContext;
+import com.ssms.common.error.ServiceException;
+import com.ssms.company.dto.CreateJobRequest;
+import com.ssms.company.dto.JobDto;
+import com.ssms.company.dto.JobList;
+import com.ssms.company.model.Job;
+import com.ssms.company.repo.JobRepo;
+import com.ssms.company.service.helper.ServiceHelper;
 
 import java.util.List;
 

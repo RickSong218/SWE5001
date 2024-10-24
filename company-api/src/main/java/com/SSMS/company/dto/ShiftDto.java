@@ -1,4 +1,4 @@
-package com.SSMS.company.dto;
+package com.ssms.company.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 
 import java.time.Instant;
 
-import static com.SSMS.company.dto.CreateShiftRequest.MAX_SHIFT_DURATION;
+import static com.ssms.company.dto.CreateShiftRequest.MAX_SHIFT_DURATION;
 
 @Data
 @AllArgsConstructor

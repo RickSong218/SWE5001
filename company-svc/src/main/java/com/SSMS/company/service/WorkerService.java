@@ -1,17 +1,19 @@
-package com.SSMS.company.service;
+package com.ssms.company.service;
 
+import com.ssms.company.dto.WorkerDto;
+import com.ssms.company.dto.WorkerEntries;
+import com.ssms.company.dto.WorkerOfList;
 import com.github.structlog4j.ILogger;
 import com.github.structlog4j.SLoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.SSMS.common.api.ResultCode;
-import com.SSMS.common.auditlog.LogEntry;
-import com.SSMS.common.auth.AuthContext;
-import com.SSMS.common.error.ServiceException;
-import com.SSMS.company.dto.*;
-import com.SSMS.company.model.Worker;
-import com.SSMS.company.repo.WorkerRepo;
-import com.SSMS.company.service.helper.ServiceHelper;
+import com.ssms.common.api.ResultCode;
+import com.ssms.common.auditlog.LogEntry;
+import com.ssms.common.auth.AuthContext;
+import com.ssms.common.error.ServiceException;
+import com.ssms.company.model.Worker;
+import com.ssms.company.repo.WorkerRepo;
+import com.ssms.company.service.helper.ServiceHelper;
 
 import java.util.List;
 
