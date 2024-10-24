@@ -1,7 +1,7 @@
-package com.SSMS.company.controller;
+package com.ssms.company.controller;
 
 
-import com.abc.company.dto.*;
+import com.ssms.company.dto.*;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.After;
 import org.junit.Before;
@@ -15,19 +15,19 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
-import com.SSMS.account.client.AccountClient;
-import com.SSMS.account.dto.TrackEventRequest;
-import com.SSMS.bot.client.BotClient;
-import com.SSMS.bot.dto.*;
-import com.SSMS.common.api.BaseResponse;
-import com.SSMS.common.api.ResultCode;
-import com.SSMS.common.auth.AuthConstant;
-import com.SSMS.company.TestConfig;
-import com.SSMS.company.client.CompanyClient;
-import com.SSMS.company.dto.*;
-import com.SSMS.company.model.Job;
-import com.SSMS.company.repo.JobRepo;
-import com.SSMS.company.repo.ShiftRepo;
+import com.ssms.account.client.AccountClient;
+import com.ssms.account.dto.TrackEventRequest;
+import com.ssms.bot.client.BotClient;
+import com.ssms.bot.dto.*;
+import com.ssms.common.api.BaseResponse;
+import com.ssms.common.api.ResultCode;
+import com.ssms.common.auth.AuthConstant;
+import com.ssms.company.TestConfig;
+import com.ssms.company.client.CompanyClient;
+import com.ssms.company.dto.*;
+import com.ssms.company.model.Job;
+import com.ssms.company.repo.JobRepo;
+import com.ssms.company.repo.ShiftRepo;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -115,10 +115,10 @@ public class ShiftControllerTest {
                 .companyId(company.getId())
                 .userId(userId1)
                 .name("test_user001")
-                .email("test_user001@SSMS.com")
+                .email("test_user001@ssms.com")
                 .internalId(UUID.randomUUID().toString())
                 .phoneNumber("18001999999")
-                .photoUrl("https://SSMS.com/photo/test01.png")
+                .photoUrl("https://ssms.com/photo/test01.png")
                 .build();
         when(directoryService.getDirectoryEntry(company.getId(), userId1)).thenReturn(directoryEntryDto1);
 
@@ -128,10 +128,10 @@ public class ShiftControllerTest {
                 .companyId(company.getId())
                 .userId(userId2)
                 .name("test_user002")
-                .email("test_user002@SSMS.com")
+                .email("test_user002@ssms.com")
                 .internalId(UUID.randomUUID().toString())
                 .phoneNumber("18001123456")
-                .photoUrl("https://SSMS.com/photo/test02.png")
+                .photoUrl("https://ssms.com/photo/test02.png")
                 .build();
         when(directoryService.getDirectoryEntry(company.getId(), userId2)).thenReturn(directoryEntryDto2);
     }

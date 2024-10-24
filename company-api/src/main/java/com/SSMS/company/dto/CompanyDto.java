@@ -1,9 +1,9 @@
-package com.SSMS.company.dto;
+package com.ssms.company.dto;
 
-import com.SSMS.common.validation.DayOfWeek;
-import com.SSMS.common.validation.Group1;
-import com.SSMS.common.validation.Group2;
-import com.SSMS.common.validation.Timezone;
+import com.ssms.common.validation.DayOfWeek;
+import com.ssms.common.validation.Group1;
+import com.ssms.common.validation.Group2;
+import com.ssms.common.validation.Timezone;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

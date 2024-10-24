@@ -1,9 +1,17 @@
-package com.SSMS.company.controller;
+package com.ssms.company.controller;
 
-import com.SSMS.company.dto.GetWorkerOfResponse;
-import com.SSMS.company.dto.ListWorkerResponse;
-import com.SSMS.company.dto.WorkerDto;
-import com.SSMS.company.dto.WorkerEntries;
+import com.ssms.company.dto.DirectoryEntryDto;
+import com.ssms.company.dto.GenericDirectoryResponse;
+import com.ssms.company.dto.GetWorkerOfResponse;
+import com.ssms.company.dto.ListWorkerResponse;
+import com.ssms.company.dto.WorkerDto;
+import com.ssms.company.dto.WorkerEntries;
+import com.ssms.company.dto.TeamDto;
+import com.ssms.company.model.Company;
+import com.ssms.company.model.Team;
+import com.ssms.company.repo.CompanyRepo;
+import com.ssms.company.repo.TeamRepo;
+import com.ssms.company.service.DirectoryService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.After;
 import org.junit.Before;
@@ -16,14 +24,14 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
-import com.SSMS.account.client.AccountClient;
-import com.SSMS.account.dto.TrackEventRequest;
-import com.SSMS.common.api.BaseResponse;
-import com.SSMS.common.api.ResultCode;
-import com.SSMS.common.auth.AuthConstant;
-import com.SSMS.company.TestConfig;
-import com.SSMS.company.client.CompanyClient;
-import com.SSMS.company.repo.WorkerRepo;
+import com.ssms.account.client.AccountClient;
+import com.ssms.account.dto.TrackEventRequest;
+import com.ssms.common.api.BaseResponse;
+import com.ssms.common.api.ResultCode;
+import com.ssms.common.auth.AuthConstant;
+import com.ssms.company.TestConfig;
+import com.ssms.company.client.CompanyClient;
+import com.ssms.company.repo.WorkerRepo;
 
 import java.util.Optional;
 import java.util.TimeZone;
@@ -36,7 +44,7 @@ import static org.mockito.Mockito.when;
 @RunWith(SpringRunner.class)
 @DirtiesContext // avoid port conflict
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-@EnableFeignClients(basePackages = {"com.SSMS.company.client"})
+@EnableFeignClients(basePackages = {"com.ssms.company.client"})
 @Import(TestConfig.class)
 @Slf4j
 public class WorkerControllerTest {
@@ -95,10 +103,10 @@ public class WorkerControllerTest {
                 .companyId(companyId)
                 .userId(userId1)
                 .name("test_user001")
-                .email("test_user001@SSMS.com")
+                .email("test_user001@ssms.com")
                 .internalId(UUID.randomUUID().toString())
                 .phoneNumber("18001999999")
-                .photoUrl("https://SSMS.com/photo/test01.png")
+                .photoUrl("https://ssms.com/photo/test01.png")
                 .build();
         when(directoryService.getDirectoryEntry(companyId, userId1)).thenReturn(directoryEntryDto1);
 
@@ -120,10 +128,10 @@ public class WorkerControllerTest {
                 .companyId(companyId)
                 .userId(userId2)
                 .name("test_user002")
-                .email("test_user002@SSMS.com")
+                .email("test_user002@ssms.com")
                 .internalId(UUID.randomUUID().toString())
                 .phoneNumber("18002888888")
-                .photoUrl("https://SSMS.com/photo/test02.png")
+                .photoUrl("https://ssms.com/photo/test02.png")
                 .build();
         when(directoryService.getDirectoryEntry(companyId, userId2)).thenReturn(directoryEntryDto3);
 

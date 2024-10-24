@@ -1,57 +1,58 @@
-package com.SSMS.company.client;
+package com.ssms.company.client;
 
-import com.SSMS.common.api.BaseResponse;
-import com.SSMS.common.auth.AuthConstant;
-import com.SSMS.common.validation.Group1;
-import com.SSMS.common.validation.Group2;
-import com.SSMS.company.CompanyConstant;
-import com.SSMS.company.dto.*;
+import com.ssms.common.api.BaseResponse;
+import com.ssms.common.auth.AuthConstant;
+import com.ssms.common.validation.Group1;
+import com.ssms.common.validation.Group2;
+import com.ssms.company.CompanyConstant;
+import com.ssms.company.dto.*;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 @FeignClient(name = CompanyConstant.SERVICE_NAME, path = "/v1/company", url = "${staffjoy.company-service-endpoint}")
 public interface CompanyClient {
     // Company Apis
     @PostMapping(path = "/create")
-    GenericCompanyResponse createCompany(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Validated({Group2.class}) CompanyDto companyDto);
+    com.ssms.company.dto.GenericCompanyResponse createCompany(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Validated({Group2.class}) com.SSMS.company.dto.CompanyDto companyDto);
 
     @GetMapping(path = "/list")
-    ListCompanyResponse listCompanies(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam int offset, @RequestParam int limit);
+    com.ssms.company.dto.ListCompanyResponse listCompanies(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam int offset, @RequestParam int limit);
 
     @GetMapping(path= "/get")
-    GenericCompanyResponse getCompany(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam("company_id") String companyId);
+    com.ssms.company.dto.GenericCompanyResponse getCompany(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam("company_id") String companyId);
 
     @PutMapping(path= "/update")
-    GenericCompanyResponse updateCompany(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Validated({Group1.class}) CompanyDto companyDto);
+    com.ssms.company.dto.GenericCompanyResponse updateCompany(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Validated({Group1.class}) com.SSMS.company.dto.CompanyDto companyDto);
 
     // Admin Apis
     @GetMapping(path = "/admin/list")
-    ListAdminResponse listAdmins(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam String companyId);
+    com.ssms.company.dto.ListAdminResponse listAdmins(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam String companyId);
 
     @GetMapping(path = "/admin/get")
-    GenericDirectoryResponse getAdmin(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam String companyId, @RequestParam String userId);
+    com.ssms.company.dto.GenericDirectoryResponse getAdmin(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam String companyId, @RequestParam String userId);
 
     @PostMapping(path = "/admin/create")
-    GenericDirectoryResponse createAdmin(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Validated DirectoryEntryRequest request);
+    com.ssms.company.dto.GenericDirectoryResponse createAdmin(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Validated com.SSMS.company.dto.DirectoryEntryRequest request);
 
     @DeleteMapping(path = "/admin/delete")
-    BaseResponse deleteAdmin(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Validated DirectoryEntryRequest request);
+    BaseResponse deleteAdmin(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Validated com.SSMS.company.dto.DirectoryEntryRequest request);
 
     @GetMapping(path = "/admin/admin_of")
-    GetAdminOfResponse getAdminOf(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam String userId);
+    com.ssms.company.dto.GetAdminOfResponse getAdminOf(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam String userId);
 
     // Directory Apis
     @PostMapping(path = "/directory/create")
-    GenericDirectoryResponse createDirectory(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Validated NewDirectoryEntry request);
+    com.ssms.company.dto.GenericDirectoryResponse createDirectory(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Validated NewDirectoryEntry request);
 
     @GetMapping(path = "/directory/list")
-    ListDirectoryResponse listDirectories(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam String companyId, @RequestParam int offset, @RequestParam int limit);
+    com.ssms.company.dto.ListDirectoryResponse listDirectories(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam String companyId, @RequestParam int offset, @RequestParam int limit);
 
     @GetMapping(path = "/directory/get")
-    GenericDirectoryResponse getDirectoryEntry(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam String companyId, @RequestParam String userId);
+    com.ssms.company.dto.GenericDirectoryResponse getDirectoryEntry(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam String companyId, @RequestParam String userId);
 
     @PutMapping(path = "/directory/update")
-    GenericDirectoryResponse updateDirectoryEntry(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Validated DirectoryEntryDto request);
+    com.ssms.company.dto.GenericDirectoryResponse updateDirectoryEntry(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Validated com.SSMS.company.dto.DirectoryEntryDto request);
 
     @GetMapping(path = "/directory/get_associations")
     GetAssociationResponse getAssociations(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam String companyId, @RequestParam int offset, @RequestParam int limit);
@@ -61,7 +62,7 @@ public interface CompanyClient {
     ListWorkerResponse listWorkers(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam String companyId, @RequestParam String teamId);
 
     @GetMapping(path = "/worker/get")
-    GenericDirectoryResponse getWorker(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam String companyId, @RequestParam String teamId, @RequestParam String userId);
+    com.ssms.company.dto.GenericDirectoryResponse getWorker(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam String companyId, @RequestParam String teamId, @RequestParam String userId);
 
     @DeleteMapping(path = "/worker/delete")
     BaseResponse deleteWorker(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Validated WorkerDto workerDto);
@@ -70,23 +71,23 @@ public interface CompanyClient {
     GetWorkerOfResponse getWorkerOf(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam String userId);
 
     @PostMapping(path = "/worker/create")
-    GenericDirectoryResponse createWorker(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Validated WorkerDto workerDto);
+    com.ssms.company.dto.GenericDirectoryResponse createWorker(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Validated WorkerDto workerDto);
 
     // Team Apis
     @PostMapping(path = "/team/create")
-    GenericTeamResponse createTeam(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Validated CreateTeamRequest request);
+    com.ssms.company.dto.GenericTeamResponse createTeam(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Validated com.SSMS.company.dto.CreateTeamRequest request);
 
     @GetMapping(path = "/team/list")
-    ListTeamResponse listTeams(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam String companyId);
+    com.ssms.company.dto.ListTeamResponse listTeams(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam String companyId);
 
     @GetMapping(path = "/team/get")
-    GenericTeamResponse getTeam(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam String companyId, @RequestParam String teamId);
+    com.ssms.company.dto.GenericTeamResponse getTeam(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam String companyId, @RequestParam String teamId);
 
     @PutMapping(path = "/team/update")
-    GenericTeamResponse updateTeam(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Validated TeamDto teamDto);
+    com.ssms.company.dto.GenericTeamResponse updateTeam(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestBody @Validated com.SSMS.company.dto.TeamDto teamDto);
 
     @GetMapping(path = "/team/get_worker_team_info")
-    GenericWorkerResponse getWorkerTeamInfo(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam(required = false) String companyId, @RequestParam String userId);
+    com.ssms.company.dto.GenericWorkerResponse getWorkerTeamInfo(@RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String authz, @RequestParam(required = false) String companyId, @RequestParam String userId);
 
     // Job Apis
     @PostMapping(path = "/job/create")

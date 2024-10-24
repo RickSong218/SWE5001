@@ -1,6 +1,6 @@
-package com.SSMS.company.dto;
+package com.ssms.company.dto;
 
-import com.SSMS.common.validation.PhoneNumber;
+import com.ssms.common.validation.PhoneNumber;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

@@ -9,12 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
-public class DirectoryList {
+public class Association {
+    private com.ssms.company.dto.DirectoryEntryDto account;
     @Builder.Default
-    private List<DirectoryEntryDto> accounts = new ArrayList<DirectoryEntryDto>();
-    private int limit;
-    private int offset;
+    private List<com.ssms.company.dto.TeamDto> teams = new ArrayList<com.ssms.company.dto.TeamDto>();
+    private Boolean admin;
 }

@@ -1,14 +1,14 @@
-package com.SSMS.company.service;
+package com.ssms.company.service;
 
-import com.SSMS.common.api.ResultCode;
-import com.SSMS.common.auditlog.LogEntry;
-import com.SSMS.common.auth.AuthContext;
-import com.SSMS.common.error.ServiceException;
-import com.SSMS.company.dto.CompanyDto;
-import com.SSMS.company.dto.CompanyList;
-import com.SSMS.company.model.Company;
-import com.SSMS.company.repo.CompanyRepo;
-import com.SSMS.company.service.helper.ServiceHelper;
+import com.ssms.common.api.ResultCode;
+import com.ssms.common.auditlog.LogEntry;
+import com.ssms.common.auth.AuthContext;
+import com.ssms.common.error.ServiceException;
+import com.ssms.company.dto.CompanyDto;
+import com.ssms.company.dto.CompanyList;
+import com.ssms.company.model.Company;
+import com.ssms.company.repo.CompanyRepo;
+import com.ssms.company.service.helper.ServiceHelper;
 import com.github.structlog4j.ILogger;
 import com.github.structlog4j.SLoggerFactory;
 import org.modelmapper.ModelMapper;

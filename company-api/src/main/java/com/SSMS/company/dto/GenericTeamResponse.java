@@ -1,6 +1,7 @@
-package com.SSMS.company.dto;
+package com.ssms.company.dto;
 
-import com.SSMS.common.api.BaseResponse;
+import com.ssms.common.api.BaseResponse;
+import lombok.*;
 
 @Getter
 @Setter
@@ -9,5 +10,5 @@ import com.SSMS.common.api.BaseResponse;
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
 public class GenericTeamResponse extends BaseResponse {
-    private TeamDto team;
+    private com.ssms.company.dto.TeamDto team;
 }

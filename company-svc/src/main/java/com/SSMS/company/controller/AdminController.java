@@ -1,16 +1,18 @@
-package com.SSMS.company.controller;
+package com.ssms.company.controller;
 
-import com.SSMS.common.api.BaseResponse;
-import com.SSMS.common.api.ResultCode;
-import com.SSMS.common.auth.AuthConstant;
-import com.SSMS.common.auth.AuthContext;
-import com.SSMS.common.auth.Authorize;
-import com.SSMS.common.auth.PermissionDeniedException;
-import com.SSMS.common.error.ServiceException;
-import com.SSMS.company.service.AdminService;
-import com.SSMS.company.service.PermissionService;
+import com.ssms.common.api.BaseResponse;
+import com.ssms.common.api.ResultCode;
+import com.ssms.common.auth.AuthConstant;
+import com.ssms.common.auth.AuthContext;
+import com.ssms.common.auth.Authorize;
+import com.ssms.common.auth.PermissionDeniedException;
+import com.ssms.common.error.ServiceException;
+import com.ssms.company.service.AdminService;
+import com.ssms.company.service.PermissionService;
+import com.ssms.company.dto.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/v1/company/admin")

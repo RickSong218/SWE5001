@@ -1,6 +1,7 @@
-package com.SSMS.company.controller.ut;
+package com.ssms.company.controller.ut;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ssms.company.service.CompanyService;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -14,13 +15,14 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
-import com.SSMS.common.api.ResultCode;
-import com.SSMS.common.auth.AuthConstant;
-import com.SSMS.company.dto.CompanyDto;
-import com.SSMS.company.dto.CompanyList;
-import com.SSMS.company.dto.ListCompanyResponse;
-import com.SSMS.company.dto.GenericCompanyResponse;
+import com.ssms.common.api.ResultCode;
+import com.ssms.common.auth.AuthConstant;
+import com.ssms.company.dto.CompanyDto;
+import com.ssms.company.dto.CompanyList;
+import com.ssms.company.dto.ListCompanyResponse;
+import com.ssms.company.dto.GenericCompanyResponse;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;

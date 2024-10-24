@@ -1,18 +1,19 @@
-package com.SSMS.company.controller;
+package com.ssms.company.controller;
 
-import com.SSMS.common.auth.AuthConstant;
-import com.SSMS.common.auth.AuthContext;
-import com.SSMS.common.auth.Authorize;
-import com.SSMS.common.validation.Group1;
-import com.SSMS.common.validation.Group2;
-import com.SSMS.company.dto.CompanyDto;
-import com.SSMS.company.dto.CompanyList;
-import com.SSMS.company.dto.GenericCompanyResponse;
-import com.SSMS.company.dto.ListCompanyResponse;
-import com.SSMS.company.service.CompanyService;
-import com.SSMS.company.service.PermissionService;
+import com.ssms.common.auth.AuthConstant;
+import com.ssms.common.auth.AuthContext;
+import com.ssms.common.auth.Authorize;
+import com.ssms.common.validation.Group1;
+import com.ssms.common.validation.Group2;
+import com.ssms.company.dto.CompanyDto;
+import com.ssms.company.dto.CompanyList;
+import com.ssms.company.dto.GenericCompanyResponse;
+import com.ssms.company.dto.ListCompanyResponse;
+import com.ssms.company.service.CompanyService;
+import com.ssms.company.service.PermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/v1/company")

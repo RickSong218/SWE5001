@@ -1,15 +1,15 @@
-package com.SSMS.company.service;
+package com.ssms.company.service;
 
-import com.SSMS.common.auditlog.LogEntry;
-import com.SSMS.common.auth.AuthContext;
-import com.SSMS.common.error.ServiceException;
-import com.SSMS.company.dto.AdminEntries;
-import com.SSMS.company.dto.AdminOfList;
-import com.SSMS.company.dto.CompanyDto;
-import com.SSMS.company.dto.DirectoryEntryDto;
-import com.SSMS.company.model.Admin;
-import com.SSMS.company.repo.AdminRepo;
-import com.SSMS.company.service.helper.ServiceHelper;
+import com.ssms.common.auditlog.LogEntry;
+import com.ssms.common.auth.AuthContext;
+import com.ssms.common.error.ServiceException;
+import com.ssms.company.dto.AdminEntries;
+import com.ssms.company.dto.AdminOfList;
+import com.ssms.company.dto.CompanyDto;
+import com.ssms.company.dto.DirectoryEntryDto;
+import com.ssms.company.model.Admin;
+import com.ssms.company.repo.AdminRepo;
+import com.ssms.company.service.helper.ServiceHelper;
 import com.github.structlog4j.ILogger;
 import com.github.structlog4j.SLoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,10 +25,10 @@ public class AdminService {
     AdminRepo adminRepo;
 
     @Autowired
-    CompanyService companyService;
+    com.ssms.company.service.CompanyService companyService;
 
     @Autowired
-    DirectoryService directoryService;
+    com.ssms.company.service.DirectoryService directoryService;
 
     @Autowired
     ServiceHelper serviceHelper;

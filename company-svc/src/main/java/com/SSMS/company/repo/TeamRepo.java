@@ -1,6 +1,6 @@
-package com.SSMS.company.repo;
+package com.ssms.company.repo;
 
-import com.SSMS.company.model.Team;
+import com.ssms.company.model.Team;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

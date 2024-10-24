@@ -1,8 +1,6 @@
 package com.ssms.company.service;
 
-import com.ssms.company.dto.WorkerDto;
-import com.ssms.company.dto.WorkerEntries;
-import com.ssms.company.dto.WorkerOfList;
+import com.ssms.company.dto.*;
 import com.github.structlog4j.ILogger;
 import com.github.structlog4j.SLoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

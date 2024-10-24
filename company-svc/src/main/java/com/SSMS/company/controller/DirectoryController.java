@@ -1,12 +1,14 @@
-package com.SSMS.company.controller;
+package com.ssms.company.controller;
 
-import com.SSMS.common.auth.AuthConstant;
-import com.SSMS.common.auth.AuthContext;
-import com.SSMS.common.auth.Authorize;
-import com.SSMS.company.service.DirectoryService;
-import com.SSMS.company.service.PermissionService;
+import com.ssms.common.auth.AuthConstant;
+import com.ssms.common.auth.AuthContext;
+import com.ssms.common.auth.Authorize;
+import com.ssms.company.service.DirectoryService;
+import com.ssms.company.service.PermissionService;
+import com.ssms.company.dto.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/v1/company/directory")

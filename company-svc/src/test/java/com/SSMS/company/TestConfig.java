@@ -1,11 +1,11 @@
-package com.SSMS.company;
+package com.ssms.company;
 
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.util.StringUtils;
-import com.SSMS.common.auth.AuthConstant;
+import com.ssms.common.auth.AuthConstant;
 
 import java.util.UUID;
 

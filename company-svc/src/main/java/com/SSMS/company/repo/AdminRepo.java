@@ -1,6 +1,6 @@
-package com.SSMS.company.repo;
+package com.ssms.company.repo;
 
-import com.SSMS.company.model.Admin;
+import com.ssms.company.model.Admin;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

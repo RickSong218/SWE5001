@@ -1,6 +1,10 @@
-package com.SSMS.company.controller;
+package com.ssms.company.controller;
 
-import com.abc.company.dto.*;
+import com.ssms.company.dto.*;
+import com.ssms.company.model.Company;
+import com.ssms.company.model.Team;
+import com.ssms.company.repo.CompanyRepo;
+import com.ssms.company.repo.TeamRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.After;
 import org.junit.Before;
@@ -13,14 +17,14 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
-import com.SSMS.account.client.AccountClient;
-import com.SSMS.account.dto.TrackEventRequest;
-import com.SSMS.common.api.BaseResponse;
-import com.SSMS.common.auth.AuthConstant;
-import com.SSMS.company.TestConfig;
-import com.SSMS.company.client.CompanyClient;
-import com.SSMS.company.dto.*;
-import com.SSMS.company.repo.JobRepo;
+import com.ssms.account.client.AccountClient;
+import com.ssms.account.dto.TrackEventRequest;
+import com.ssms.common.api.BaseResponse;
+import com.ssms.common.auth.AuthConstant;
+import com.ssms.company.TestConfig;
+import com.ssms.company.client.CompanyClient;
+import com.ssms.company.dto.*;
+import com.ssms.company.repo.JobRepo;
 
 import java.util.Optional;
 import java.util.TimeZone;
@@ -33,7 +37,7 @@ import static org.mockito.Mockito.when;
 @RunWith(SpringRunner.class)
 @DirtiesContext // avoid port conflict
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-@EnableFeignClients(basePackages = {"com.SSMS.company.client"})
+@EnableFeignClients(basePackages = {"com.ssms.company.client"})
 @Import(TestConfig.class)
 @Slf4j
 public class JobControllerTest {

@@ -1,6 +1,6 @@
-package com.SSMS.company.repo;
+package com.ssms.company.repo;
 
-import com.SSMS.company.model.Directory;
+import com.ssms.company.model.Directory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

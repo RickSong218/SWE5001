@@ -1,4 +1,9 @@
-package com.SSMS.company.dto;
+package com.ssms.company.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,5 +15,5 @@ import java.util.List;
 public class AdminOfList {
     private String userId;
     @Builder.Default
-    private List<CompanyDto> companies = new ArrayList<CompanyDto>();
+    private List<com.ssms.company.dto.CompanyDto> companies = new ArrayList<com.ssms.company.dto.CompanyDto>();
 }

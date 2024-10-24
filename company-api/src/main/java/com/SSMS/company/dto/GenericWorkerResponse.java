@@ -1,6 +1,7 @@
-package com.SSMS.company.dto;
+package com.ssms.company.dto;
 
-import com.SSMS.common.api.BaseResponse;
+import com.ssms.common.api.BaseResponse;
+import lombok.*;
 
 @Getter
 @Setter
