@@ -6,15 +6,15 @@
     <modelVersion>4.0.0</modelVersion>
  
     <parent>
-        <groupId>com.SSMS</groupId>
-        <artifactId>SSMS-parent</artifactId>
+        <groupId>com.ssms</groupId>
+        <artifactId>ssms-parent</artifactId>
         <version>1.0</version>
     </parent>
  
     <artifactId>mail-svc</artifactId>
-    <name>SSMS-Mail-Svc</name>
+    <name>ssms-Mail-Svc</name>
     <version>1.0.0</version>
-    <description>Mail project for SSMS microservices demo</description>
+    <description>Mail project for ssms microservices demo</description>
  
     <dependencies>
 
@@ -30,12 +30,12 @@
             <version>3.1.0</version>
         </dependency>
         <dependency>
-            <groupId>com.SSMS</groupId>
+            <groupId>com.ssms</groupId>
             <artifactId>mail-api</artifactId>
             <version>1.0.1</version>
         </dependency>
         <dependency>
-            <groupId>com.SSMS</groupId>
+            <groupId>com.ssms</groupId>
             <artifactId>common-lib</artifactId>
         </dependency>
     </dependencies>

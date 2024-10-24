@@ -6,19 +6,19 @@
     <modelVersion>4.0.0</modelVersion>
  
     <parent>
-        <groupId>com.SSMS</groupId>
-        <artifactId>SSMS-parent</artifactId>
+        <groupId>com.ssms</groupId>
+        <artifactId>ssms-parent</artifactId>
         <version>1.0</version>
     </parent>
  
     <artifactId>mail-api</artifactId>
-    <name>SSMS-Mail-API</name>
+    <name>ssms-Mail-API</name>
     <version>1.0.1</version>
     <description>Mail API/DTO for sharing between Client/Server</description>
  
     <dependencies>
         <dependency>
-            <groupId>com.SSMS</groupId>
+            <groupId>com.ssms</groupId>
             <artifactId>common-lib</artifactId>
         </dependency>
     </dependencies>

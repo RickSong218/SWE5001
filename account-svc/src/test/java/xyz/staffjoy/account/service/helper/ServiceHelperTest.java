@@ -1,4 +1,4 @@
-package com.SSMS.account.service.helper;
+package com.ssms.account.service.helper;
 
 import io.intercom.api.CustomAttribute;
 import io.intercom.api.User;
@@ -8,12 +8,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.*;
 import org.mockito.junit.MockitoJUnitRunner;
-import com.SSMS.account.model.Account;
-import com.SSMS.account.repo.AccountRepo;
-import com.SSMS.bot.client.BotClient;
-import com.SSMS.common.env.EnvConfig;
-import com.SSMS.company.client.CompanyClient;
-import com.SSMS.company.dto.*;
+import com.ssms.account.model.Account;
+import com.ssms.account.repo.AccountRepo;
+import com.ssms.bot.client.BotClient;
+import com.ssms.common.env.EnvConfig;
+import com.ssms.company.client.CompanyClient;
+import com.ssms.company.dto.*;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -115,7 +115,7 @@ public class ServiceHelperTest {
         assertThat(user.getCustomAttributes().get("confirmed_and_active")).isEqualTo(CustomAttribute.newBooleanAttribute("confirmed_and_active", account.isConfirmedAndActive()));
         assertThat(user.getCustomAttributes().get("is_worker")).isEqualTo(CustomAttribute.newBooleanAttribute("is_worker", true));
         assertThat(user.getCustomAttributes().get("is_admin")).isEqualTo(CustomAttribute.newBooleanAttribute("is_admin", true));
-        assertThat(user.getCustomAttributes().get("is_SSMS_support")).isEqualTo(CustomAttribute.newBooleanAttribute("is_SSMS_support", account.isSupport()));
+        assertThat(user.getCustomAttributes().get("is_ssms_support")).isEqualTo(CustomAttribute.newBooleanAttribute("is_ssms_support", account.isSupport()));
 
         io.intercom.api.Company iCompany = user.getCompanyCollection().next();
         assertThat(iCompany.getCompanyID()).isEqualTo(companyId);

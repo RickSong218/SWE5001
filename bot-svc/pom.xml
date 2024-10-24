@@ -6,43 +6,43 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.SSMS</groupId>
-        <artifactId>SSMS-parent</artifactId>
+        <groupId>com.ssms</groupId>
+        <artifactId>ssms-parent</artifactId>
         <version>1.0</version>
     </parent>
 
     <artifactId>bot-svc</artifactId>
-    <name>SSMS-Bot-Svc</name>
+    <name>ssms-Bot-Svc</name>
     <version>1.0.0</version>
-    <description>Bot project for SSMS microservices demo</description>
+    <description>Bot project for ssms microservices demo</description>
 
     <dependencies>
         <dependency>
-            <groupId>com.SSMS</groupId>
+            <groupId>com.ssms</groupId>
             <artifactId>common-lib</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.SSMS</groupId>
+            <groupId>com.ssms</groupId>
             <artifactId>bot-api</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>
-            <groupId>com.SSMS</groupId>
+            <groupId>com.ssms</groupId>
             <artifactId>account-api</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>
-            <groupId>com.SSMS</groupId>
+            <groupId>com.ssms</groupId>
             <artifactId>company-api</artifactId>
             <version>1.0.0</version>
         </dependency>
 <!--        <dependency>-->
-<!--            <groupId>com.SSMS</groupId>-->
+<!--            <groupId>com.ssms</groupId>-->
 <!--            <artifactId>sms-api</artifactId>-->
 <!--            <version>1.0.0</version>-->
 <!--        </dependency>-->
         <dependency>
-            <groupId>com.SSMS</groupId>
+            <groupId>com.ssms</groupId>
             <artifactId>mail-api</artifactId>
             <version>1.0.1</version>
         </dependency>

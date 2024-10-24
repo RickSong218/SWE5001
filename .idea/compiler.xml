@@ -7,19 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="company-svc" />
         <module name="bot-api" />
+        <module name="web-app" />
+        <module name="whoami-api" />
         <module name="account-api" />
         <module name="mail-api" />
+        <module name="company-api" />
         <module name="common-lib" />
         <module name="mail-svc" />
         <module name="account-svc" />
         <module name="bot-svc" />
+        <module name="whoami-svc" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="account-api (1) (xyz.staffjoy)" target="1.5" />
-      <module name="account-api (2)" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -29,8 +30,13 @@
       <module name="bot-api" options="-parameters" />
       <module name="bot-svc" options="-parameters" />
       <module name="common-lib" options="-parameters" />
+      <module name="company-api" options="-parameters" />
+      <module name="company-svc" options="-parameters" />
       <module name="mail-api" options="-parameters" />
       <module name="mail-svc" options="-parameters" />
+      <module name="web-app" options="-parameters" />
+      <module name="whoami-api" options="-parameters" />
+      <module name="whoami-svc" options="-parameters" />
     </option>
   </component>
 </project>

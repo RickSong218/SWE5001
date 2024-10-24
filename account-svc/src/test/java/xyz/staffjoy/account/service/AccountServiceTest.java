@@ -1,4 +1,4 @@
-package com.SSMS.account.service;
+package com.ssms.account.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
@@ -10,17 +10,17 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import com.SSMS.account.AccountConstant;
-import com.SSMS.account.dto.AccountDto;
-import com.SSMS.account.model.Account;
-import com.SSMS.account.props.AppProps;
-import com.SSMS.account.repo.AccountRepo;
-import com.SSMS.account.repo.AccountSecretRepo;
-import com.SSMS.account.service.helper.ServiceHelper;
-import com.SSMS.common.api.BaseResponse;
-import com.SSMS.common.env.EnvConfig;
-import com.SSMS.mail.client.MailClient;
-import com.SSMS.mail.dto.EmailRequest;
+import com.ssms.account.AccountConstant;
+import com.ssms.account.dto.AccountDto;
+import com.ssms.account.model.Account;
+import com.ssms.account.props.AppProps;
+import com.ssms.account.repo.AccountRepo;
+import com.ssms.account.repo.AccountSecretRepo;
+import com.ssms.account.service.helper.ServiceHelper;
+import com.ssms.common.api.BaseResponse;
+import com.ssms.common.env.EnvConfig;
+import com.ssms.mail.client.MailClient;
+import com.ssms.mail.dto.EmailRequest;
 
 import java.time.Instant;
 import java.util.UUID;
@@ -59,7 +59,7 @@ public class AccountServiceTest {
 
     @Test
     public void testSendEmail() {
-        String externalApex = "SSMS-v2.local";
+        String externalApex = "ssms-v2.local";
         when(appProps.getSigningSecret()).thenReturn("test_secret");
         when(envConfig.getExternalApex()).thenReturn(externalApex);
         when(mailClient.send(any(EmailRequest.class))).thenReturn(BaseResponse.builder().message("email sent").build());
@@ -67,7 +67,7 @@ public class AccountServiceTest {
         String userId = UUID.randomUUID().toString();
         String email = "test@jskillcloud.com";
         String name = "test_name";
-        String subject = "Activate your SSMS account";
+        String subject = "Activate your ssms account";
         String template = AccountConstant.ACTIVATE_ACCOUNT_TMPL;
         boolean activateOrConfirm = true;
 
@@ -97,7 +97,7 @@ public class AccountServiceTest {
         assertThat(StringUtils.countMatches(emailRequest.getHtmlBody(), name)).isEqualTo(1);
         assertThat(emailRequest.getHtmlBody()).startsWith("<div>Hi");
 
-        subject = "Reset your SSMS password";
+        subject = "Reset your ssms password";
         template = AccountConstant.RESET_PASSWORD_TMPL;
         accountService.sendEmail(userId, email, name, subject, template, false);
 
@@ -117,10 +117,10 @@ public class AccountServiceTest {
 
         Account account = Account.builder().id("123456")
                 .name("testAccount")
-                .email("test@SSMS.net")
+                .email("test@ssms.net")
                 .memberSince(Instant.now())
                 .confirmedAndActive(true)
-                .photoUrl("https://SSMS.xyz/photo/test.png")
+                .photoUrl("https://ssms.xyz/photo/test.png")
                 .phoneNumber("18001801266")
                 .support(false)
                 .build();
