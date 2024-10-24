@@ -1,17 +1,17 @@
-package com.SSMS.whoami.controller;
+package com.ssms.whoami.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.SSMS.common.auth.AuthConstant;
-import com.SSMS.common.auth.AuthContext;
-import com.SSMS.common.auth.Authorize;
-import com.SSMS.whoami.dto.FindWhoAmIResponse;
-import com.SSMS.whoami.dto.GetIntercomSettingResponse;
-import com.SSMS.whoami.dto.IAmDto;
-import com.SSMS.whoami.dto.IntercomSettingsDto;
-import com.SSMS.whoami.service.WhoAmIService;
+import com.ssms.common.auth.AuthConstant;
+import com.ssms.common.auth.AuthContext;
+import com.ssms.common.auth.Authorize;
+import com.ssms.whoami.dto.FindWhoAmIResponse;
+import com.ssms.whoami.dto.GetIntercomSettingResponse;
+import com.ssms.whoami.dto.IAmDto;
+import com.ssms.whoami.dto.IntercomSettingsDto;
+import com.ssms.whoami.service.WhoAmIService;
 
 @RestController
 @RequestMapping("/v1")

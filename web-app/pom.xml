@@ -6,13 +6,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.SSMS</groupId>
-        <artifactId>staffjoy-parent</artifactId>
+        <groupId>com.ssms</groupId>
+        <artifactId>ssms-parent</artifactId>
         <version>1.0</version>
     </parent>
 
     <artifactId>web-app</artifactId>
-    <name>Staffjoy-Web-App</name>
+    <name>ssms-Web-App</name>
     <version>1.0.0</version>
     <url>https://www.staffjoy.xyz</url>
 
@@ -36,21 +36,21 @@
             <version>3.0.1</version>
         </dependency>
         <dependency>
-            <groupId>com.SSMS</groupId>
+            <groupId>com.ssms</groupId>
             <artifactId>common-lib</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.SSMS</groupId>
+            <groupId>com.ssms</groupId>
             <artifactId>account-api</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>
-            <groupId>com.SSMS</groupId>
+            <groupId>com.ssms</groupId>
             <artifactId>company-api</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>
-            <groupId>com.SSMS</groupId>
+            <groupId>com.ssms</groupId>
             <artifactId>mail-api</artifactId>
             <version>1.0.1</version>
         </dependency>

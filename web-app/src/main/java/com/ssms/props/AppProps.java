@@ -1,4 +1,4 @@
-package com.ssms.whoami.props;
+package com.ssms.props;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,8 +16,8 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AppProps {
-
-    private String intercomAppId;
-    private String intercomSigningSecret;
-
+    @NotNull
+    private String recaptchaPublic;
+    @NotNull
+    private String signingSecret;
 }
