@@ -1,4 +1,4 @@
-package com.ssms.mail.service;
+package com.SSMS.mail.service;
 
 import com.aliyuncs.IAcsClient;
 import com.aliyuncs.dm.model.v20151123.SingleSendMailRequest;
@@ -12,11 +12,11 @@ import io.sentry.context.Context;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
-import com.ssms.common.env.EnvConfig;
-import com.ssms.common.env.EnvConstant;
-import com.ssms.mail.MailConstant;
-import com.ssms.mail.config.AppConfig;
-import com.ssms.mail.dto.EmailRequest;
+import com.SSMS.common.env.EnvConfig;
+import com.SSMS.common.env.EnvConstant;
+import com.SSMS.mail.MailConstant;
+import com.SSMS.mail.config.AppConfig;
+import com.SSMS.mail.dto.EmailRequest;
 
 @Service
 public class MailSendService {
@@ -48,7 +48,7 @@ public class MailSendService {
             String subject = String.format("[%s] %s", envConfig.getName(), req.getSubject());
             req.setSubject(subject);
 
-            if (!req.getTo().endsWith(MailConstant.ssms_EMAIL_SUFFIX)) {
+            if (!req.getTo().endsWith(MailConstant.SSMS_EMAIL_SUFFIX)) {
                 logger.warn("Intercepted sending due to non-production environment.");
                 return;
             }

@@ -1,4 +1,4 @@
-package com.ssms.mail;
+package com.SSMS.mail;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -20,7 +20,7 @@
     <root level="info">
         <appender-ref ref="ConsoleAppender" />
     </root>
-    <logger name="com.SSMS" additivity="false" level="info">
+    <logger name="com.ssms" additivity="false" level="info">
         <appender-ref ref="ConsoleAppender" />
     </logger>
 </configuration>

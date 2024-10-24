@@ -1,2 +1,0 @@
-logging:
-  config: /etc/SSMS/logback-spring.xml

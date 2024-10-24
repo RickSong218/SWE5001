@@ -1,4 +1,4 @@
-package com.ssms.bot.controller;
+package com.SSMS.bot.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
@@ -10,17 +10,17 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
-import com.ssms.account.client.AccountClient;
-import com.ssms.account.dto.AccountDto;
-import com.ssms.account.dto.GenericAccountResponse;
-import com.ssms.bot.BotConstant;
-import com.ssms.bot.client.BotClient;
-import com.ssms.bot.dto.GreetingRequest;
-import com.ssms.common.api.BaseResponse;
-import com.ssms.common.api.ResultCode;
-import com.ssms.common.auth.AuthConstant;
-import com.ssms.mail.client.MailClient;
-import com.ssms.mail.dto.EmailRequest;
+import com.SSMS.account.client.AccountClient;
+import com.SSMS.account.dto.AccountDto;
+import com.SSMS.account.dto.GenericAccountResponse;
+import com.SSMS.bot.BotConstant;
+import com.SSMS.bot.client.BotClient;
+import com.SSMS.bot.dto.GreetingRequest;
+import com.SSMS.common.api.BaseResponse;
+import com.SSMS.common.api.ResultCode;
+import com.SSMS.common.auth.AuthConstant;
+import com.SSMS.mail.client.MailClient;
+import com.SSMS.mail.dto.EmailRequest;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -34,7 +34,7 @@ import static org.springframework.boot.test.context.SpringBootTest.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.DEFINED_PORT)
 @DirtiesContext // avoid port conflict
-@EnableFeignClients(basePackages = {"com.ssms.bot.client"})
+@EnableFeignClients(basePackages = {"com.SSMS.bot.client"})
 @Slf4j
 public class GreetingControllerTest {
     @Autowired
@@ -52,11 +52,11 @@ public class GreetingControllerTest {
         AccountDto accountDto = AccountDto.builder()
                 .name("test_user001")
                 .phoneNumber("11111111111")
-                .email("test_user001@ssms.com")
+                .email("test_user001@SSMS.com")
                 .id(userId)
                 .memberSince(Instant.now().minus(30, ChronoUnit.DAYS))
                 .confirmedAndActive(true)
-                .photoUrl("https://ssms.com/photo/test01.png")
+                .photoUrl("https://SSMS.com/photo/test01.png")
                 .build();
         when(accountClient.getAccount(AuthConstant.AUTHORIZATION_BOT_SERVICE, userId))
                 .thenReturn(new GenericAccountResponse(accountDto));
@@ -72,7 +72,7 @@ public class GreetingControllerTest {
         EmailRequest emailRequest = argument.getValue();
         assertThat(emailRequest.getTo()).isEqualTo(accountDto.getEmail());
         assertThat(emailRequest.getName()).isEqualTo(accountDto.getName());
-        assertThat(emailRequest.getSubject()).isEqualTo("ssms Greeting");
+        assertThat(emailRequest.getSubject()).isEqualTo("SSMS Greeting");
         assertThat(emailRequest.getHtmlBody()).isEqualTo(BotConstant.GREETING_EMAIL_TEMPLATE);
     }
 

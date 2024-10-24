@@ -1,14 +1,14 @@
-package com.ssms.bot.client;
+package com.SSMS.bot.client;
 
-import com.ssms.bot.dto.*;
+import com.SSMS.bot.dto.*;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import com.ssms.bot.BotConstant;
-import com.ssms.common.api.BaseResponse;
+import com.SSMS.bot.BotConstant;
+import com.SSMS.common.api.BaseResponse;
 
-@FeignClient(name = BotConstant.SERVICE_NAME, path = "/v1", url = "${ssms.bot-service-endpoint}")
+@FeignClient(name = BotConstant.SERVICE_NAME, path = "/v1", url = "${SSMS.bot-service-endpoint}")
 public interface BotClient {
 
     @PostMapping(path="sms_greeting")

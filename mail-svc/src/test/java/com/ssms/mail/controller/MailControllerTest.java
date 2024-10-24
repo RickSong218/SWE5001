@@ -1,4 +1,4 @@
-package com.ssms.mail.controller;
+package com.SSMS.mail.controller;
 
 import com.aliyuncs.IAcsClient;
 import com.aliyuncs.dm.model.v20151123.SingleSendMailRequest;
@@ -13,10 +13,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.test.context.junit4.SpringRunner;
-import com.ssms.common.api.BaseResponse;
-import com.ssms.mail.MailConstant;
-import com.ssms.mail.client.MailClient;
-import com.ssms.mail.dto.EmailRequest;
+import com.SSMS.common.api.BaseResponse;
+import com.SSMS.mail.MailConstant;
+import com.SSMS.mail.client.MailClient;
+import com.SSMS.mail.dto.EmailRequest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
@@ -25,7 +25,7 @@ import static org.mockito.Mockito.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 //@DirtiesContext // avoid port conflict
-@EnableFeignClients(basePackages = {"com.ssms.mail.client"})
+@EnableFeignClients(basePackages = {"com.SSMS.mail.client"})
 @Slf4j
 public class MailControllerTest {
     @Autowired
