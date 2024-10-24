@@ -1,4 +1,4 @@
-package com.SSMS.common.crypto;
+package com.ssms.common.crypto;
 
 
 import org.bouncycastle.util.encoders.Hex;

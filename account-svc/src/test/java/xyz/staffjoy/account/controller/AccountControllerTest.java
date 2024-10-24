@@ -1,4 +1,4 @@
-package com.SSMS.account.controller;
+package com.ssms.account.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
@@ -13,20 +13,20 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit4.SpringRunner;
-import com.SSMS.account.TestConfig;
-import com.SSMS.account.client.AccountClient;
-import com.SSMS.account.dto.*;
-import com.SSMS.account.model.Account;
-import com.SSMS.account.repo.AccountRepo;
-import com.SSMS.account.repo.AccountSecretRepo;
-import com.SSMS.bot.client.BotClient;
-import com.SSMS.bot.dto.GreetingRequest;
-import com.SSMS.common.api.BaseResponse;
-import com.SSMS.common.api.ResultCode;
-import com.SSMS.common.auth.AuthConstant;
-import com.SSMS.common.env.EnvConfig;
-import com.SSMS.mail.client.MailClient;
-import com.SSMS.mail.dto.EmailRequest;
+import com.ssms.account.TestConfig;
+import com.ssms.account.client.AccountClient;
+import com.ssms.account.dto.*;
+import com.ssms.account.model.Account;
+import com.ssms.account.repo.AccountRepo;
+import com.ssms.account.repo.AccountSecretRepo;
+import com.ssms.bot.client.BotClient;
+import com.ssms.bot.dto.GreetingRequest;
+import com.ssms.common.api.BaseResponse;
+import com.ssms.common.api.ResultCode;
+import com.ssms.common.auth.AuthConstant;
+import com.ssms.common.env.EnvConfig;
+import com.ssms.mail.client.MailClient;
+import com.ssms.mail.dto.EmailRequest;
 
 import java.time.Instant;
 
@@ -36,7 +36,7 @@ import static org.mockito.Mockito.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-@EnableFeignClients(basePackages = {"com.SSMS.account.client"})
+@EnableFeignClients(basePackages = {"com.ssms.account.client"})
 @Import(TestConfig.class)
 @Slf4j
 public class AccountControllerTest {
@@ -75,7 +75,7 @@ public class AccountControllerTest {
         when(mailClient.send(any(EmailRequest.class))).thenReturn(BaseResponse.builder().message("email sent").build());
 
         String name = "testAccount";
-        String email = "test@SSMS.xyz";
+        String email = "test@ssms.xyz";
         String phoneNumber = "18001801236";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
@@ -89,7 +89,7 @@ public class AccountControllerTest {
         assertThat(accountDto.isConfirmedAndActive()).isFalse();
 
         // change email
-        String changedEmail = "test123@SSMS.xyz";
+        String changedEmail = "test123@ssms.xyz";
         EmailConfirmation emailConfirmation = EmailConfirmation.builder()
                 .userId(accountDto.getId())
                 .email(changedEmail)
@@ -124,7 +124,7 @@ public class AccountControllerTest {
         when(mailClient.send(any(EmailRequest.class))).thenReturn(BaseResponse.builder().message("email sent").build());
 
         String name = "testAccount";
-        String email = "test@SSMS.xyz";
+        String email = "test@ssms.xyz";
         String phoneNumber = "18001801236";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
@@ -137,7 +137,7 @@ public class AccountControllerTest {
         AccountDto accountDto = genericAccountResponse.getAccount();
 
         // request email change
-        String updatedEmail = "test111@SSMS.xyz";
+        String updatedEmail = "test111@ssms.xyz";
         EmailChangeRequest emailChangeRequest = EmailChangeRequest.builder()
                 .email(updatedEmail)
                 .userId(accountDto.getId())
@@ -146,7 +146,7 @@ public class AccountControllerTest {
         assertThat(baseResponse.isSuccess()).isTrue();
 
         // capture and verify email sent
-        String externalApex = "SSMS-v2.local";
+        String externalApex = "ssms-v2.local";
         String subject = "Confirm Your New Email Address";
         ArgumentCaptor<EmailRequest> argument = ArgumentCaptor.forClass(EmailRequest.class);
         verify(mailClient, times(2)).send(argument.capture());
@@ -166,7 +166,7 @@ public class AccountControllerTest {
         when(mailClient.send(any(EmailRequest.class))).thenReturn(BaseResponse.builder().message("email sent").build());
 
         String name = "testAccount";
-        String email = "test@SSMS.xyz";
+        String email = "test@ssms.xyz";
         String phoneNumber = "18001801236";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
@@ -186,8 +186,8 @@ public class AccountControllerTest {
         assertThat(baseResponse.isSuccess()).isTrue();
 
         // capture and verify
-        String subject = "Activate your SSMS account";
-        String externalApex = "SSMS-v2.local";
+        String subject = "Activate your ssms account";
+        String externalApex = "ssms-v2.local";
         ArgumentCaptor<EmailRequest> argument = ArgumentCaptor.forClass(EmailRequest.class);
         // 2 times, 1 for account creation, 1 for password reset
         verify(mailClient, times(2)).send(argument.capture());
@@ -214,7 +214,7 @@ public class AccountControllerTest {
         assertThat(baseResponse.isSuccess()).isTrue();
 
         // capture and verify
-        subject = "Reset your SSMS password";
+        subject = "Reset your ssms password";
         argument = ArgumentCaptor.forClass(EmailRequest.class);
         // 3 times, 1 for account creation, 2 for password reset
         verify(mailClient, times(3)).send(argument.capture());
@@ -233,7 +233,7 @@ public class AccountControllerTest {
         when(mailClient.send(any(EmailRequest.class))).thenReturn(BaseResponse.builder().message("email sent").build());
 
         String name = "testAccount";
-        String email = "test@SSMS.xyz";
+        String email = "test@ssms.xyz";
         String phoneNumber = "18001801236";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
@@ -269,7 +269,7 @@ public class AccountControllerTest {
         // verify not found
         VerifyPasswordRequest verifyPasswordRequest = VerifyPasswordRequest.builder()
                 .password(password)
-                .email("test000@SSMS.xyz")
+                .email("test000@ssms.xyz")
                 .build();
         genericAccountResponse = accountClient.verifyPassword(AuthConstant.AUTHORIZATION_WWW_SERVICE, verifyPasswordRequest);
         log.info(genericAccountResponse.toString());
@@ -309,7 +309,7 @@ public class AccountControllerTest {
         when(mailClient.send(any(EmailRequest.class))).thenReturn(BaseResponse.builder().message("email sent").build());
 
         String name = "testAccount";
-        String email = "test@SSMS.xyz";
+        String email = "test@ssms.xyz";
         String phoneNumber = "18001801236";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
@@ -354,7 +354,7 @@ public class AccountControllerTest {
 
         // create first account
         String name = "testAccount001";
-        String email = "test001@SSMS.xyz";
+        String email = "test001@ssms.xyz";
         String phoneNumber = "18001801235";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
@@ -367,10 +367,10 @@ public class AccountControllerTest {
 
         // create second account
         name = "testAccount002";
-        email = "test002@SSMS.xyz";
+        email = "test002@ssms.xyz";
         phoneNumber = "18001801236";
         String subject = "Confirm Your New Email Address";
-        String externalApex = "SSMS-v2.local";
+        String externalApex = "ssms-v2.local";
         createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
                 .email(email)
@@ -420,7 +420,7 @@ public class AccountControllerTest {
         accountDto.setMemberSince(oldMemberSince);
         // can't update to existing email
         String oldEmail = accountDto.getEmail();
-        accountDto.setEmail("test001@SSMS.xyz");
+        accountDto.setEmail("test001@ssms.xyz");
         genericAccountResponse1 = accountClient.updateAccount(AuthConstant.AUTHORIZATION_WWW_SERVICE, accountDto);
         log.info(genericAccountResponse1.toString());
         assertThat(genericAccountResponse1.isSuccess()).isFalse();
@@ -473,7 +473,7 @@ public class AccountControllerTest {
 
         // user can change his/her email
         oldEmail = accountDto.getEmail();
-        String updatedEmail = "test003@SSMS.xyz";
+        String updatedEmail = "test003@ssms.xyz";
         accountDto.setEmail(updatedEmail);
         genericAccountResponse1 = accountClient.updateAccount(AuthConstant.AUTHORIZATION_AUTHENTICATED_USER, accountDto);
         log.info(genericAccountResponse1.toString());
@@ -504,9 +504,9 @@ public class AccountControllerTest {
 
         // first account
         String name = "testAccount001";
-        String email = "test001@SSMS.xyz";
+        String email = "test001@ssms.xyz";
         String phoneNumber = "18001801236";
-        String subject = "Activate your SSMS account";
+        String subject = "Activate your ssms account";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
                 .email(email)
@@ -541,9 +541,9 @@ public class AccountControllerTest {
 
         // first account
         String name = "testAccount001";
-        String email = "test001@SSMS.xyz";
+        String email = "test001@ssms.xyz";
         String phoneNumber = "18001801236";
-        String subject = "Activate your SSMS account";
+        String subject = "Activate your ssms account";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
                 .email(email)
@@ -575,9 +575,9 @@ public class AccountControllerTest {
 
         // first account
         String name = "testAccount001";
-        String email = "test001@SSMS.xyz";
+        String email = "test001@ssms.xyz";
         String phoneNumber = "18001801236";
-        String subject = "Activate your SSMS account";
+        String subject = "Activate your ssms account";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
                 .email(email)
@@ -598,7 +598,7 @@ public class AccountControllerTest {
 
         // second account
         name = "testAccount002";
-        email = "test002@SSMS.xyz";
+        email = "test002@ssms.xyz";
         phoneNumber = "18001801237";
         createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
@@ -620,7 +620,7 @@ public class AccountControllerTest {
 
         // third account
         name = "testAccount003";
-        email = "test003@SSMS.xyz";
+        email = "test003@ssms.xyz";
         phoneNumber = "18001801238";
         createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
@@ -686,7 +686,7 @@ public class AccountControllerTest {
         when(mailClient.send(any(EmailRequest.class))).thenReturn(BaseResponse.builder().message("email sent").build());
 
         String name = "testAccount";
-        String email = "test@SSMS.xyz";
+        String email = "test@ssms.xyz";
         String phoneNumber = "18001801236";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
@@ -729,9 +729,9 @@ public class AccountControllerTest {
         when(mailClient.send(any(EmailRequest.class))).thenReturn(BaseResponse.builder().message("email sent").build());
 
         String name = "testAccount";
-        String email = "test@SSMS.xyz";
+        String email = "test@ssms.xyz";
         String phoneNumber = "18001801236";
-        String subject = "Activate your SSMS account";
+        String subject = "Activate your ssms account";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
                 .email(email)
@@ -767,9 +767,9 @@ public class AccountControllerTest {
         when(mailClient.send(any(EmailRequest.class))).thenReturn(BaseResponse.builder().message("email sent").build());
 
         String name = "testAccount001";
-        String email = "test01@SSMS.xyz";
+        String email = "test01@ssms.xyz";
         String phoneNumber = "18001801236";
-        String subject = "Activate your SSMS account";
+        String subject = "Activate your ssms account";
         CreateAccountRequest createAccountRequest = CreateAccountRequest.builder()
                 .name(name)
                 .email(email)
@@ -794,7 +794,7 @@ public class AccountControllerTest {
         // phone duplicate
         createAccountRequest = CreateAccountRequest.builder()
                 .name("testAccount003")
-                .email("test02@SSMS.xyz")
+                .email("test02@ssms.xyz")
                 .phoneNumber(phoneNumber)
                 .build();
         genericAccountResponse = accountClient.createAccount(AuthConstant.AUTHORIZATION_WWW_SERVICE, createAccountRequest);

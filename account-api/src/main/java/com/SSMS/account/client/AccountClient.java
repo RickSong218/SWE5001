@@ -1,18 +1,18 @@
-package com.SSMS.account.client;
+package com.ssms.account.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
-import com.SSMS.account.AccountConstant;
-import com.SSMS.account.dto.*;
-import com.SSMS.common.api.BaseResponse;
-import com.SSMS.common.auth.AuthConstant;
-import com.SSMS.common.validation.PhoneNumber;
+import com.ssms.account.AccountConstant;
+import com.ssms.account.dto.*;
+import com.ssms.common.api.BaseResponse;
+import com.ssms.common.auth.AuthConstant;
+import com.ssms.common.validation.PhoneNumber;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
-@FeignClient(name = AccountConstant.SERVICE_NAME, path = "/v1/account", url = "${SSMS.account-service-endpoint}")
+@FeignClient(name = AccountConstant.SERVICE_NAME, path = "/v1/account", url = "${ssms.account-service-endpoint}")
 // TODO Client side validation can be enabled as needed
 // @Validated
 public interface AccountClient {

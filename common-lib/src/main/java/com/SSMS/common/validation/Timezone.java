@@ -1,4 +1,4 @@
-package com.SSMS.common.validation;
+package com.ssms.common.validation;
 
 import javax.validation.Constraint;
 import java.lang.annotation.*;

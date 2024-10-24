@@ -1,7 +1,7 @@
-package com.SSMS.common.error;
+package com.ssms.common.error;
 
 import lombok.Getter;
-import com.SSMS.common.api.ResultCode;
+import com.ssms.common.api.ResultCode;
 
 /**
  * Business Service Exception

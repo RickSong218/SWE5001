@@ -1,4 +1,4 @@
-package com.SSMS.common.utils;
+package com.ssms.common.utils;
 
 public class Helper {
 

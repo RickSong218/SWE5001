@@ -1,17 +1,17 @@
-package com.SSMS.account.repo;
+package com.ssms.account.repo;
 
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import com.SSMS.account.model.Account;
+import com.ssms.account.model.Account;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit4.SpringRunner;
-import com.SSMS.account.model.AccountSecret;
+import com.ssms.account.model.AccountSecret;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -34,10 +34,10 @@ public class AccountRepoTest {
     public void setUp() {
         newAccount = Account.builder()
                 .name("testAccount")
-                .email("test@SSMS.net")
+                .email("test@ssms.net")
                 .memberSince(LocalDateTime.of(2019, 1, 20, 12, 50).atZone(ZoneId.systemDefault()).toInstant())
                 .confirmedAndActive(false)
-                .photoUrl("https://SSMS.xyz/photo/test.png")
+                .photoUrl("https://ssms.xyz/photo/test.png")
                 .phoneNumber("18001801266")
                 .support(false)
                 .build();
@@ -63,7 +63,7 @@ public class AccountRepoTest {
     @Test
     public void findAccountByEmail() {
         // not existing
-        Account foundAccount = accountRepo.findAccountByEmail("notexisting@SSMS.net");
+        Account foundAccount = accountRepo.findAccountByEmail("notexisting@ssms.net");
         assertNull(foundAccount);
 
         accountRepo.save(newAccount);
@@ -121,7 +121,7 @@ public class AccountRepoTest {
 
         Account toUpdateAccount = newAccount;
         toUpdateAccount.setName("update");
-        toUpdateAccount.setEmail("update@SSMS.xyz");
+        toUpdateAccount.setEmail("update@ssms.xyz");
         accountRepo.save(toUpdateAccount);
         Account updatedAccount = accountRepo.save(toUpdateAccount);
         Account foundAccount = accountRepo.findById(updatedAccount.getId()).get();
@@ -130,7 +130,7 @@ public class AccountRepoTest {
         toUpdateAccount.setConfirmedAndActive(true);
         toUpdateAccount.setSupport(true);
         toUpdateAccount.setPhoneNumber("19001900190");
-        toUpdateAccount.setPhotoUrl("http://SSMS.net/photo/update.png");
+        toUpdateAccount.setPhotoUrl("http://ssms.net/photo/update.png");
         updatedAccount = accountRepo.save(toUpdateAccount);
         foundAccount = accountRepo.findById(updatedAccount.getId()).get();
         assertEquals(updatedAccount, foundAccount);
@@ -143,7 +143,7 @@ public class AccountRepoTest {
         assertEquals(1, accountRepo.count());
         assertFalse(account.isConfirmedAndActive());
 
-        String toUpdateEmail = "update@SSMS.xyz";
+        String toUpdateEmail = "update@ssms.xyz";
         int result = accountRepo.updateEmailAndActivateById(toUpdateEmail, newAccount.getId());
         assertEquals(1, result);
 

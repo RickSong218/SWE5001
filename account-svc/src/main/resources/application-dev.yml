@@ -7,7 +7,7 @@ spring:
     show-sql: true
 server:
   port: 8081
-SSMS:
+ssms:
   email-service-endpoint: http://localhost:8088
   company-service-endpoint: http://localhost:8082
   bot-service-endpoint: http://localhost:8087

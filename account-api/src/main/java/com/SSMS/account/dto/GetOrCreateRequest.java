@@ -1,11 +1,11 @@
-package com.SSMS.account.dto;
+package com.ssms.account.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.util.StringUtils;
-import com.SSMS.common.validation.PhoneNumber;
+import com.ssms.common.validation.PhoneNumber;
 
 import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Email;

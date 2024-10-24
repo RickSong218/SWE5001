@@ -1,4 +1,4 @@
-package com.SSMS.common.auth;
+package com.ssms.common.auth;
 
 import org.springframework.util.StringUtils;
 import org.springframework.web.method.HandlerMethod;

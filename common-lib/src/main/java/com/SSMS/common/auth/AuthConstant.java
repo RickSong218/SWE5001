@@ -1,8 +1,8 @@
-package com.SSMS.common.auth;
+package com.ssms.common.auth;
 
 public class AuthConstant {
 
-    public static final String COOKIE_NAME = "SSMS-faraday";
+    public static final String COOKIE_NAME = "ssms-faraday";
     // header set for internal user id
     public static final String CURRENT_USER_HEADER = "faraday-current-user-id";
     // AUTHORIZATION_HEADER is the http request header
@@ -21,7 +21,7 @@ public class AuthConstant {
     // a request is being made by the account service
     public static final String AUTHORIZATION_ACCOUNT_SERVICE = "account-service";
     // AUTHORIZATION_SUPPORT_USER is set as the Authorization header to denote that
-    // a request is being made by a SSMS team member
+    // a request is being made by a ssms team member
     public static final String AUTHORIZATION_SUPPORT_USER = "faraday-support";
     // AUTHORIZATION_SUPERPOWERS_SERVICE is set as the Authorization header to
     // denote that a request is being made by the dev-only superpowers service

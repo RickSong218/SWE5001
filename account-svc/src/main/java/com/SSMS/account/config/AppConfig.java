@@ -1,4 +1,4 @@
-package com.SSMS.account.config;
+package com.ssms.account.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -7,8 +7,8 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import com.SSMS.common.async.ContextCopyingDecorator;
-import com.SSMS.common.config.SSMSRestConfig;
+import com.ssms.common.async.ContextCopyingDecorator;
+import com.ssms.common.config.SSMSRestConfig;
 
 import java.util.concurrent.Executor;
 

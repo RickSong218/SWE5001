@@ -1,4 +1,4 @@
-package com.SSMS.common.services;
+package com.ssms.common.services;
 
 import java.util.Collections;
 import java.util.Map;
@@ -9,7 +9,7 @@ import java.util.TreeMap;
  *
  * SSMSServices ia a map of subdomains -> specs
  * Subdomain is <string> + Env["rootDomain"]
- * e.g. "login" service on prod is "login" + "SSMS.xyz"
+ * e.g. "login" service on prod is "login" + "ssms.xyz"
  *
  * KEEP THIS LIST IN ALPHABETICAL ORDER PLEASE
  */

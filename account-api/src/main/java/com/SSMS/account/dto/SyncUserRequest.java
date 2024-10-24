@@ -1,4 +1,4 @@
-package com.SSMS.account.dto;
+package com.ssms.account.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

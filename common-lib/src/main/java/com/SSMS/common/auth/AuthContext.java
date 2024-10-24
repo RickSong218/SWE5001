@@ -1,4 +1,4 @@
-package com.SSMS.common.auth;
+package com.ssms.common.auth;
 
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;

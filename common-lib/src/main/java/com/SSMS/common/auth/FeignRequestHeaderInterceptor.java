@@ -1,4 +1,4 @@
-package com.SSMS.common.auth;
+package com.ssms.common.auth;
 
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
