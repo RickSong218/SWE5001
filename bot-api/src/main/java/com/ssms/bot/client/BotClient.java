@@ -1,6 +1,5 @@
 package com.SSMS.bot.client;
 
-import com.SSMS.bot.dto.*;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
