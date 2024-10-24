@@ -32,7 +32,7 @@ public class EnvConfig {
 
         envConfig = EnvConfig.builder().name(EnvConstant.ENV_TEST)
                 .debug(true)
-                .externalApex("SSMSv2.local")
+                .externalApex("SSMS-v2.local")
                 .internalApex(EnvConstant.ENV_DEV)
                 .scheme("http")
                 .build();

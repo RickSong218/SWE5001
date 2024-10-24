@@ -10,12 +10,20 @@
         <module name="company-svc (1) (com.SSMS)" />
         <module name="company-api" />
         <module name="common-lib" />
+        <module name="account-api" />
+        <module name="account-svc" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="account-api (1) (xyz.staffjoy)" target="1.5" />
+      <module name="account-api (2)" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="SSMS-parent" options="-parameters" />
+      <module name="account-api" options="-parameters" />
+      <module name="account-svc" options="-parameters" />
       <module name="common-lib" options="-parameters" />
       <module name="company-api" options="" />
       <module name="company-svc" options="" />

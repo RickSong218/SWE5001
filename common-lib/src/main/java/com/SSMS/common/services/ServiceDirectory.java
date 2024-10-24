@@ -9,7 +9,7 @@ import java.util.TreeMap;
  *
  * SSMSServices ia a map of subdomains -> specs
  * Subdomain is <string> + Env["rootDomain"]
- * e.g. "login" service on prod is "login" + "SSMS.com"
+ * e.g. "login" service on prod is "login" + "SSMS.xyz"
  *
  * KEEP THIS LIST IN ALPHABETICAL ORDER PLEASE
  */

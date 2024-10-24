@@ -3,15 +3,11 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/account-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/account-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/account-svc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/account-svc/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common-lib/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common-lib/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/company-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/company-api/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/company-svc/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/company-svc/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../staffjoy-master/company-svc/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../staffjoy-master/company-svc/src/main/resources" charset="UTF-8" />
   </component>
 </project>
