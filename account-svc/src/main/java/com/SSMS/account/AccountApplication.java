@@ -1,11 +1,11 @@
-package com.SSMS.account;
+package com.ssms.account;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableFeignClients(basePackages = {"com.SSMS.mail", "com.SSMS.bot", "com.SSMS.company"})
+@EnableFeignClients(basePackages = {"com.ssms.mail", "com.ssms.bot", "com.ssms.company"})
 public class AccountApplication {
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.SSMS.common.auditlog;
+package com.ssms.common.auditlog;
 
 import com.github.structlog4j.IToLog;
 import lombok.Builder;

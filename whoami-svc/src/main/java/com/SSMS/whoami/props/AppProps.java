@@ -1,4 +1,4 @@
-package com.SSMS.whoami.props;
+package com.ssms.whoami.props;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

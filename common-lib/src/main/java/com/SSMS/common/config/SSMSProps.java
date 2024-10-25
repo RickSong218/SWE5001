@@ -1,4 +1,4 @@
-package com.SSMS.common.config;
+package com.ssms.common.config;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,7 +8,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import javax.validation.constraints.NotBlank;
 
-@ConfigurationProperties(prefix="SSMS.common")
+@ConfigurationProperties(prefix="ssms.common")
 @Data
 @Builder
 @NoArgsConstructor

@@ -1,4 +1,4 @@
-package com.SSMS.common.services;
+package com.ssms.common.services;
 
 public class SecurityConstant {
     // Public security means a user may be logged out or logged in

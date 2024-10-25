@@ -6,23 +6,23 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.SSMS</groupId>
-        <artifactId>staffjoy-parent</artifactId>
+        <groupId>com.ssms</groupId>
+        <artifactId>ssms-parent</artifactId>
         <version>1.0</version>
     </parent>
 
     <artifactId>whoami-api</artifactId>
-    <name>Staffjoy-WhoAmI-API</name>
+    <name>Ssms-WhoAmI-API</name>
     <version>1.0.0</version>
     <description>WhoAmI API/DTO for sharing between Client/Server</description>
 
     <dependencies>
         <dependency>
-            <groupId>com.SSMS</groupId>
+            <groupId>com.ssms</groupId>
             <artifactId>common-lib</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.SSMS</groupId>
+            <groupId>com.ssms</groupId>
             <artifactId>company-api</artifactId>
             <version>1.0.0</version>
         </dependency>

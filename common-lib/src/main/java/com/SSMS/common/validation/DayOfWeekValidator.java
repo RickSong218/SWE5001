@@ -1,4 +1,4 @@
-package com.SSMS.common.validation;
+package com.ssms.common.validation;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

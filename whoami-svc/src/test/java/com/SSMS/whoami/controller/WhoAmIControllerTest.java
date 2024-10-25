@@ -1,4 +1,4 @@
-package com.SWE5001.whoami.controller;
+package com.ssms.whoami.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
@@ -9,20 +9,20 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.test.context.junit4.SpringRunner;
-import com.SWE5001.account.client.AccountClient;
-import com.SWE5001.account.dto.AccountDto;
-import com.SWE5001.account.dto.GenericAccountResponse;
-import com.SWE5001.common.auth.AuthConstant;
-import com.SWE5001.common.crypto.Hash;
-import com.SWE5001.company.client.CompanyClient;
-import com.SWE5001.company.dto.*;
-import com.SWE5001.whoami.TestConfig;
-import com.SWE5001.whoami.client.WhoAmIClient;
-import com.SWE5001.whoami.dto.FindWhoAmIResponse;
-import com.SWE5001.whoami.dto.GetIntercomSettingResponse;
-import com.SWE5001.whoami.dto.IAmDto;
-import com.SWE5001.whoami.dto.IntercomSettingsDto;
-import com.SWE5001.whoami.props.AppProps;
+import com.ssms.account.client.AccountClient;
+import com.ssms.account.dto.AccountDto;
+import com.ssms.account.dto.GenericAccountResponse;
+import com.ssms.common.auth.AuthConstant;
+import com.ssms.common.crypto.Hash;
+import com.ssms.company.client.CompanyClient;
+import com.ssms.company.dto.*;
+import com.ssms.whoami.TestConfig;
+import com.ssms.whoami.client.WhoAmIClient;
+import com.ssms.whoami.dto.FindWhoAmIResponse;
+import com.ssms.whoami.dto.GetIntercomSettingResponse;
+import com.ssms.whoami.dto.IAmDto;
+import com.ssms.whoami.dto.IntercomSettingsDto;
+import com.ssms.whoami.props.AppProps;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -35,7 +35,7 @@ import static org.mockito.Mockito.when;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 //@DirtiesContext // avoid port conflict
-@EnableFeignClients(basePackages = {"com.SWE5001.whoami.client"})
+@EnableFeignClients(basePackages = {"com.ssms.whoami.client"})
 @Slf4j
 public class WhoAmIControllerTest {
     @Autowired

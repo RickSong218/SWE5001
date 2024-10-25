@@ -1,10 +1,10 @@
-package com.SSMS.common.config;
+package com.ssms.common.config;
 
-import com.SSMS.common.aop.SentryClientAspect;
+import com.ssms.common.aop.SentryClientAspect;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import com.SSMS.common.error.GlobalExceptionTranslator;
-import com.SSMS.common.aop.*;
+import com.ssms.common.error.GlobalExceptionTranslator;
+import com.ssms.common.aop.*;
 
 /**
  * Use this common config for Rest API

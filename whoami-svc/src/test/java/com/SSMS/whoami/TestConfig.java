@@ -1,11 +1,11 @@
-package com.SSMS.whoami;
+package com.ssms.whoami;
 
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.util.StringUtils;
-import com.SSMS.common.auth.AuthConstant;
+import com.ssms.common.auth.AuthConstant;
 
 /**
  * Pass CURRENT_USER_HEADER via Feign for testing

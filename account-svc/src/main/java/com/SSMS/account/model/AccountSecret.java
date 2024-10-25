@@ -1,4 +1,4 @@
-package com.SSMS.account.model;
+package com.ssms.account.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

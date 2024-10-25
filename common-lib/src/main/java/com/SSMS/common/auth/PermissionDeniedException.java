@@ -1,7 +1,7 @@
-package com.SSMS.common.auth;
+package com.ssms.common.auth;
 
 import lombok.Getter;
-import com.SSMS.common.api.ResultCode;
+import com.ssms.common.api.ResultCode;
 
 public class PermissionDeniedException extends RuntimeException {
 

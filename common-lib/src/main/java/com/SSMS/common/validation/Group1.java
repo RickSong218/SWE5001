@@ -1,4 +1,4 @@
-package com.SSMS.common.validation;
+package com.ssms.common.validation;
 
 public interface Group1 {
 }

@@ -9,5 +9,11 @@
     <file url="file://$PROJECT_DIR$/common-lib/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web-app/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web-app/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/whoami-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/whoami-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/whoami-svc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/whoami-svc/src/main/resources" charset="UTF-8" />
   </component>
 </project>

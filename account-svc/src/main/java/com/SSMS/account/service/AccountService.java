@@ -1,4 +1,4 @@
-package com.SSMS.account.service;
+package com.ssms.account.service;
 
 import com.github.structlog4j.ILogger;
 import com.github.structlog4j.SLoggerFactory;
@@ -10,26 +10,26 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
-import com.SSMS.account.AccountConstant;
-import com.SSMS.account.dto.AccountDto;
-import com.SSMS.account.model.Account;
-import com.SSMS.account.model.AccountSecret;
-import com.SSMS.account.props.AppProps;
-import com.SSMS.account.dto.AccountList;
-import com.SSMS.account.repo.AccountRepo;
-import com.SSMS.account.repo.AccountSecretRepo;
-import com.SSMS.account.service.helper.ServiceHelper;
-import com.SSMS.common.api.BaseResponse;
-import com.SSMS.common.api.ResultCode;
-import com.SSMS.common.auditlog.LogEntry;
-import com.SSMS.common.auth.AuthConstant;
-import com.SSMS.common.auth.AuthContext;
-import com.SSMS.common.crypto.Sign;
-import com.SSMS.common.env.EnvConfig;
-import com.SSMS.common.error.ServiceException;
-import com.SSMS.common.utils.Helper;
-import com.SSMS.mail.client.MailClient;
-import com.SSMS.mail.dto.EmailRequest;
+import com.ssms.account.AccountConstant;
+import com.ssms.account.dto.AccountDto;
+import com.ssms.account.model.Account;
+import com.ssms.account.model.AccountSecret;
+import com.ssms.account.props.AppProps;
+import com.ssms.account.dto.AccountList;
+import com.ssms.account.repo.AccountRepo;
+import com.ssms.account.repo.AccountSecretRepo;
+import com.ssms.account.service.helper.ServiceHelper;
+import com.ssms.common.api.BaseResponse;
+import com.ssms.common.api.ResultCode;
+import com.ssms.common.auditlog.LogEntry;
+import com.ssms.common.auth.AuthConstant;
+import com.ssms.common.auth.AuthContext;
+import com.ssms.common.crypto.Sign;
+import com.ssms.common.env.EnvConfig;
+import com.ssms.common.error.ServiceException;
+import com.ssms.common.utils.Helper;
+import com.ssms.mail.client.MailClient;
+import com.ssms.mail.dto.EmailRequest;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -142,7 +142,7 @@ public class AccountService {
                 emailName = "there";
             }
 
-            String subject = "Activate your SSMS account";
+            String subject = "Activate your ssms account";
             System.out.println("sending email.....");
             this.sendEmail(account.getId(), email, emailName, subject, AccountConstant.ACTIVATE_ACCOUNT_TMPL, true);
         }
@@ -325,13 +325,13 @@ public class AccountService {
             throw new ServiceException(ResultCode.NOT_FOUND, "No user with that email exists");
         }
 
-        String subject = "Reset your SSMS password";
+        String subject = "Reset your ssms password";
         boolean activate = false; // reset
         String tmpl = AccountConstant.RESET_PASSWORD_TMPL;
         if (!account.isConfirmedAndActive()) {
             // Not actually active - make some tweaks for activate instead of password reset
             activate = true; // activate
-            subject = "Activate your SSMS account";
+            subject = "Activate your ssms account";
             tmpl = AccountConstant.ACTIVATE_ACCOUNT_TMPL;
         }
 

@@ -1,6 +1,6 @@
-package com.SSMS.common.auth;
+package com.ssms.common.auth;
 
-import com.SSMS.common.crypto.Sign;
+import com.ssms.common.crypto.Sign;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

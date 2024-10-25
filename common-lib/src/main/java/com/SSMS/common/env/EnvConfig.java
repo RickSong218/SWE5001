@@ -1,4 +1,4 @@
-package com.SSMS.common.env;
+package com.ssms.common.env;
 
 import lombok.*;
 
@@ -24,7 +24,7 @@ public class EnvConfig {
         map = new HashMap<String, EnvConfig>();
         EnvConfig envConfig = EnvConfig.builder().name(EnvConstant.ENV_DEV)
                 .debug(true)
-                .externalApex("SSMS-v2.local")
+                .externalApex("ssms-v2.local")
                 .internalApex(EnvConstant.ENV_DEV)
                 .scheme("http")
                 .build();
@@ -32,17 +32,17 @@ public class EnvConfig {
 
         envConfig = EnvConfig.builder().name(EnvConstant.ENV_TEST)
                 .debug(true)
-                .externalApex("SSMS-v2.local")
+                .externalApex("ssms-v2.local")
                 .internalApex(EnvConstant.ENV_DEV)
                 .scheme("http")
                 .build();
         map.put(EnvConstant.ENV_TEST, envConfig);
 
-        // for aliyun k8s demo, enable debug and use http and SSMS-uat.local
-        // in real world, disable debug and use http and SSMS-uat.xyz in UAT environment
+        // for aliyun k8s demo, enable debug and use http and ssms-uat.local
+        // in real world, disable debug and use http and ssms-uat.xyz in UAT environment
         envConfig = EnvConfig.builder().name(EnvConstant.ENV_UAT)
                 .debug(true)
-                .externalApex("SSMS-uat.local")
+                .externalApex("ssms-uat.local")
                 .internalApex(EnvConstant.ENV_UAT)
                 .scheme("http")
                 .build();
@@ -50,7 +50,7 @@ public class EnvConfig {
 
 //        envConfig = EnvConfig.builder().name(EnvConstant.ENV_UAT)
 //                .debug(false)
-//                .externalApex("SSMS-uat.xyz")
+//                .externalApex("ssms-uat.xyz")
 //                .internalApex(EnvConstant.ENV_UAT)
 //                .scheme("https")
 //                .build();
@@ -58,7 +58,7 @@ public class EnvConfig {
 
         envConfig = EnvConfig.builder().name(EnvConstant.ENV_PROD)
                 .debug(false)
-                .externalApex("SSMS.com")
+                .externalApex("ssms.com")
                 .internalApex(EnvConstant.ENV_PROD)
                 .scheme("https")
                 .build();

@@ -1,4 +1,4 @@
-package com.SSMS.account.service.helper;
+package com.ssms.account.service.helper;
 
 import com.github.structlog4j.ILogger;
 import com.github.structlog4j.SLoggerFactory;
@@ -12,18 +12,18 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
-import com.SSMS.account.config.AppConfig;
-import com.SSMS.account.model.Account;
-import com.SSMS.account.repo.AccountRepo;
-import com.SSMS.bot.client.BotClient;
-import com.SSMS.bot.dto.GreetingRequest;
-import com.SSMS.common.api.BaseResponse;
-import com.SSMS.common.api.ResultCode;
-import com.SSMS.common.auth.AuthConstant;
-import com.SSMS.common.env.EnvConfig;
-import com.SSMS.common.error.ServiceException;
-import com.SSMS.company.client.CompanyClient;
-import com.SSMS.company.dto.*;
+import com.ssms.account.config.AppConfig;
+import com.ssms.account.model.Account;
+import com.ssms.account.repo.AccountRepo;
+import com.ssms.bot.client.BotClient;
+import com.ssms.bot.dto.GreetingRequest;
+import com.ssms.common.api.BaseResponse;
+import com.ssms.common.api.ResultCode;
+import com.ssms.common.auth.AuthConstant;
+import com.ssms.common.env.EnvConfig;
+import com.ssms.common.error.ServiceException;
+import com.ssms.company.client.CompanyClient;
+import com.ssms.company.dto.*;
 
 import java.time.Instant;
 import java.util.HashMap;

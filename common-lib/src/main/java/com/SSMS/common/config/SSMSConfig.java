@@ -1,4 +1,4 @@
-package com.SSMS.common.config;
+package com.ssms.common.config;
 
 import com.github.structlog4j.StructLog4J;
 import com.github.structlog4j.json.JsonFormatter;
@@ -13,9 +13,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import com.SSMS.common.auth.AuthorizeInterceptor;
-import com.SSMS.common.auth.FeignRequestHeaderInterceptor;
-import com.SSMS.common.env.EnvConfig;
+import com.ssms.common.auth.AuthorizeInterceptor;
+import com.ssms.common.auth.FeignRequestHeaderInterceptor;
+import com.ssms.common.env.EnvConfig;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;

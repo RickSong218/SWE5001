@@ -1,11 +1,11 @@
-package com.SSMS.whoami.dto;
+package com.ssms.whoami.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.SSMS.company.dto.AdminOfList;
-import com.SSMS.company.dto.WorkerOfList;
+import com.ssms.company.dto.AdminOfList;
+import com.ssms.company.dto.WorkerOfList;
 
 @Data
 @NoArgsConstructor

@@ -1,7 +1,7 @@
-package com.SSMS.whoami.dto;
+package com.ssms.whoami.dto;
 
 import lombok.*;
-import com.SSMS.common.api.BaseResponse;
+import com.ssms.common.api.BaseResponse;
 
 @Getter
 @Setter

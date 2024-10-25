@@ -1,12 +1,12 @@
-package com.SSMS.whoami.client;
+package com.ssms.whoami.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
-import com.SSMS.common.auth.AuthConstant;
-import com.SSMS.whoami.WhoAmIConstant;
-import com.SSMS.whoami.dto.FindWhoAmIResponse;
-import com.SSMS.whoami.dto.GetIntercomSettingResponse;
+import com.ssms.common.auth.AuthConstant;
+import com.ssms.whoami.WhoAmIConstant;
+import com.ssms.whoami.dto.FindWhoAmIResponse;
+import com.ssms.whoami.dto.GetIntercomSettingResponse;
 
 @FeignClient(name = WhoAmIConstant.SERVICE_NAME, path = "/v1", url = "${staffjoy.whoami-service-endpoint}")
 public interface WhoAmIClient {

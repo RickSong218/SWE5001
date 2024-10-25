@@ -1,4 +1,4 @@
-package com.SSMS.account.controller;
+package com.ssms.account.controller;
 
 import com.github.structlog4j.ILogger;
 import com.github.structlog4j.SLoggerFactory;
@@ -6,17 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import com.SSMS.account.dto.*;
-import com.SSMS.account.service.AccountService;
-import com.SSMS.common.api.BaseResponse;
-import com.SSMS.common.auth.AuthConstant;
-import com.SSMS.common.auth.AuthContext;
-import com.SSMS.common.auth.Authorize;
-import com.SSMS.common.auth.PermissionDeniedException;
-import com.SSMS.common.env.EnvConfig;
-import com.SSMS.common.env.EnvConstant;
-import com.SSMS.common.error.ServiceException;
-import com.SSMS.common.validation.PhoneNumber;
+import com.ssms.account.dto.*;
+import com.ssms.account.service.AccountService;
+import com.ssms.common.api.BaseResponse;
+import com.ssms.common.auth.AuthConstant;
+import com.ssms.common.auth.AuthContext;
+import com.ssms.common.auth.Authorize;
+import com.ssms.common.auth.PermissionDeniedException;
+import com.ssms.common.env.EnvConfig;
+import com.ssms.common.env.EnvConstant;
+import com.ssms.common.error.ServiceException;
+import com.ssms.common.validation.PhoneNumber;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Min;

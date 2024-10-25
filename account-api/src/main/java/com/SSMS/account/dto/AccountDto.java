@@ -1,10 +1,10 @@
-package com.SSMS.account.dto;
+package com.ssms.account.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.SSMS.common.validation.PhoneNumber;
+import com.ssms.common.validation.PhoneNumber;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;

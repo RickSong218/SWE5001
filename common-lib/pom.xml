@@ -6,13 +6,13 @@
     <modelVersion>4.0.0</modelVersion>
  
     <parent>
-        <groupId>com.SSMS</groupId>
-        <artifactId>SSMS-parent</artifactId>
+        <groupId>com.ssms</groupId>
+        <artifactId>ssms-parent</artifactId>
         <version>1.0</version>
     </parent>
  
     <artifactId>common-lib</artifactId>
-    <name>SSMS-Common-Library</name>
+    <name>ssms-Common-Library</name>
     <version>1.0.1</version>
 
     <dependencies>

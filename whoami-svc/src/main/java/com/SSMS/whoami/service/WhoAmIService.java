@@ -1,24 +1,24 @@
-package com.SSMS.whoami.service;
+package com.ssms.whoami.service;
 
 import com.github.structlog4j.ILogger;
 import com.github.structlog4j.SLoggerFactory;
 import io.sentry.SentryClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.SSMS.account.client.AccountClient;
-import com.SSMS.account.dto.AccountDto;
-import com.SSMS.account.dto.GenericAccountResponse;
-import com.SSMS.common.auth.AuthConstant;
-import com.SSMS.common.crypto.Hash;
-import com.SSMS.common.error.ServiceException;
-import com.SSMS.company.client.CompanyClient;
-import com.SSMS.company.dto.AdminOfList;
-import com.SSMS.company.dto.GetAdminOfResponse;
-import com.SSMS.company.dto.GetWorkerOfResponse;
-import com.SSMS.company.dto.WorkerOfList;
-import com.SSMS.whoami.dto.IAmDto;
-import com.SSMS.whoami.dto.IntercomSettingsDto;
-import com.SSMS.whoami.props.AppProps;
+import com.ssms.account.client.AccountClient;
+import com.ssms.account.dto.AccountDto;
+import com.ssms.account.dto.GenericAccountResponse;
+import com.ssms.common.auth.AuthConstant;
+import com.ssms.common.crypto.Hash;
+import com.ssms.common.error.ServiceException;
+import com.ssms.company.client.CompanyClient;
+import com.ssms.company.dto.AdminOfList;
+import com.ssms.company.dto.GetAdminOfResponse;
+import com.ssms.company.dto.GetWorkerOfResponse;
+import com.ssms.company.dto.WorkerOfList;
+import com.ssms.whoami.dto.IAmDto;
+import com.ssms.whoami.dto.IntercomSettingsDto;
+import com.ssms.whoami.props.AppProps;
 
 @Service
 public class WhoAmIService {
