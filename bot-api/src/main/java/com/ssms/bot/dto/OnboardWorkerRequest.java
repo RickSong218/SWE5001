@@ -1,4 +1,4 @@
-package com.SSMS.bot.dto;
+package com.ssms.bot.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

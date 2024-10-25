@@ -1,4 +1,4 @@
-package com.SSMS.mail.config;
+package com.ssms.mail.config;
 
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.IAcsClient;
@@ -6,9 +6,9 @@ import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
 import org.springframework.context.annotation.Import;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
-import com.SSMS.common.config.SSMSRestConfig;
-import com.SSMS.mail.MailConstant;
-import com.SSMS.mail.props.AppProps;
+import com.ssms.common.config.ssmsRestConfig;
+import com.ssms.mail.MailConstant;
+import com.ssms.mail.props.AppProps;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,7 +18,7 @@ import java.util.concurrent.Executor;
 
 @Configuration
 @EnableAsync
-@Import(value = SSMSRestConfig.class)
+@Import(value = ssmsRestConfig.class)
 @SuppressWarnings(value = "Duplicates")
 public class AppConfig {
 

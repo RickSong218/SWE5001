@@ -1,4 +1,4 @@
-package com.SSMS.mail.props;
+package com.ssms.mail.props;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import javax.validation.constraints.NotNull;
 
 @Component
-@ConfigurationProperties(prefix="SSMS")
+@ConfigurationProperties(prefix="ssms")
 @Data
 @Builder
 @NoArgsConstructor

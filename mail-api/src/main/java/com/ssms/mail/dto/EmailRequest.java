@@ -1,4 +1,4 @@
-package com.SSMS.mail.dto;
+package com.ssms.mail.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
