@@ -1,4 +1,4 @@
-package xyz.staffjoy.whoami.dto;
+package com.ssms.whoami.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

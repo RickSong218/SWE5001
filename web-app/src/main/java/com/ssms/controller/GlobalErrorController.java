@@ -9,7 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import com.ssms.common.config.StaffjoyProps;
+import com.ssms.common.config.SSMSProps;
 import com.ssms.common.env.EnvConfig;
 import com.ssms.view.Constant;
 import com.ssms.view.error.ErrorPage;
@@ -30,7 +30,7 @@ public class GlobalErrorController implements ErrorController {
     @Autowired
     SentryClient sentryClient;
     @Autowired
-    StaffjoyProps staffjoyProps;
+    SSMSProps SSMSProps;
     @Autowired
     EnvConfig envConfig;
 
@@ -59,7 +59,7 @@ public class GlobalErrorController implements ErrorController {
                 sentryClient.sendException((Exception)exception);
                 UUID uuid = sentryClient.getContext().getLastEventId();
                 errorPage.setSentryErrorId(uuid.toString());
-                errorPage.setSentryPublicDsn(staffjoyProps.getSentryDsn());
+                errorPage.setSentryPublicDsn(SSMSProps.getSentryDsn());
                 logger.warn("Reported error to sentry", "id", uuid.toString(), "error", exception);
             }
         }

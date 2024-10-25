@@ -2,6 +2,8 @@ package com.ssms.company.service.helper;
 
 import com.github.structlog4j.ILogger;
 import com.github.structlog4j.SLoggerFactory;
+import com.ssms.company.service.DirectoryService;
+import com.ssms.company.service.TeamService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

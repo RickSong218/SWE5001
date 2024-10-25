@@ -48,11 +48,23 @@
             <artifactId>company-api</artifactId>
             <version>1.0.0</version>
         </dependency>
-<!--        <dependency>
+        <dependency>
             <groupId>com.ssms</groupId>
             <artifactId>account-api</artifactId>
             <version>1.0.0</version>
-        </dependency>-->
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.ssms</groupId>
+            <artifactId>bot-api</artifactId>
+            <version>1.0.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <!--        <dependency>
+                    <groupId>com.ssms</groupId>
+                    <artifactId>account-api</artifactId>
+                    <version>1.0.0</version>
+                </dependency>-->
 <!--        <dependency>
             <groupId>com.ssms</groupId>
             <artifactId>bot-api</artifactId>

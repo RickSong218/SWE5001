@@ -6,7 +6,7 @@ spring:
   application:
     name: whoami-service
 
-staffjoy:
+ssms:
   common:
     sentry-dsn: ${SENTRY_DSN}
     deploy-env: ${DEPLOY:V2}

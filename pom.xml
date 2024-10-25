@@ -40,7 +40,7 @@
         <module>whoami-api</module>
         <module>whoami-svc</module>
         <module>web-app</module>
-        <!--<module>faraday</module>-->
+        <module>faraday</module>
     </modules>
 
     <dependencyManagement>

@@ -5,7 +5,7 @@ spring:
 server:
   port: 8086
 
-staffjoy:
+ssms:
   email-service-endpoint: http://localhost:8088
   company-service-endpoint: http://localhost:8082
   account-service-endpoint: http://localhost:8081

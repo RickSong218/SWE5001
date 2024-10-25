@@ -11,7 +11,7 @@ server:
     whitelabel:
       enabled: false
 
-staffjoy:
+ssms:
   common:
     sentry-dsn: ${SENTRY_DSN}
     deploy-env: ${DEPLOY:V2}

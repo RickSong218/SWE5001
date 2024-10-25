@@ -7,16 +7,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="whoami-api" />
+        <module name="faraday" />
+        <module name="company-api" />
+        <module name="common-lib" />
+        <module name="account-svc" />
         <module name="company-svc" />
         <module name="bot-api" />
         <module name="web-app" />
-        <module name="whoami-api" />
         <module name="account-api" />
         <module name="mail-api" />
-        <module name="company-api" />
-        <module name="common-lib" />
         <module name="mail-svc" />
-        <module name="account-svc" />
         <module name="bot-svc" />
         <module name="whoami-svc" />
       </profile>
@@ -32,6 +33,7 @@
       <module name="common-lib" options="-parameters" />
       <module name="company-api" options="-parameters" />
       <module name="company-svc" options="-parameters" />
+      <module name="faraday" options="-parameters" />
       <module name="mail-api" options="-parameters" />
       <module name="mail-svc" options="-parameters" />
       <module name="web-app" options="-parameters" />

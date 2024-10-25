@@ -6,13 +6,13 @@ import org.springframework.context.annotation.Import;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import com.ssms.common.async.ContextCopyingDecorator;
-import com.ssms.common.config.ssmsRestConfig;
+import com.ssms.common.config.SSMSRestConfig;
 
 import java.util.concurrent.Executor;
 
 @Configuration
 @EnableAsync
-@Import(value = {ssmsRestConfig.class})
+@Import(value = {SSMSRestConfig.class})
 @SuppressWarnings(value = "Duplicates")
 public class AppConfig {
     public static final String ASYNC_EXECUTOR_NAME = "asyncExecutor";

@@ -1,6 +1,6 @@
 package com.ssms.company.config;
 
-import com.ssms.common.config.ssmsRestConfig;
+import com.ssms.common.config.SSMSRestConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -12,7 +12,7 @@ import java.util.concurrent.Executor;
 
 @Configuration
 @EnableAsync
-@Import(value = {ssmsRestConfig.class})
+@Import(value = {SSMSRestConfig.class})
 @SuppressWarnings(value = "Duplicates")
 public class AppConfig {
 

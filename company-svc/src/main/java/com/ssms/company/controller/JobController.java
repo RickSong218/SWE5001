@@ -9,6 +9,7 @@ import com.ssms.common.auth.Authorize;
 import com.ssms.company.dto.*;
 import com.ssms.company.service.JobService;
 import com.ssms.company.service.PermissionService;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/v1/company/job")

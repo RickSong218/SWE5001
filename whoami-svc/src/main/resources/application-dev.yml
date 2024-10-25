@@ -11,6 +11,6 @@ management:
       exposure:
         include: "*"
 
-staffjoy:
+ssms:
   account-service-endpoint: http://localhost:8081
   company-service-endpoint: http://localhost:8082
