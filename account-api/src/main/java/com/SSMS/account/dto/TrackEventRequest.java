@@ -1,4 +1,4 @@
-package com.ssms.account.dto;
+package com.ssms.company.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,9 +11,9 @@ import javax.validation.constraints.NotBlank;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class TrackEventRequest {
+public class DirectoryEntryRequest {
+    @NotBlank
+    private String companyId;
     @NotBlank
     private String userId;
-    @NotBlank
-    private String event;
 }

@@ -21,8 +21,8 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 @Configuration
-@EnableConfigurationProperties(SSMSProps.class)
-public class SSMSConfig implements WebMvcConfigurer {
+@EnableConfigurationProperties(com.ssms.common.config.ssmsProps.class)
+public class ssmsConfig implements WebMvcConfigurer {
 
     @Value("${spring.profiles.active:NA}")
     private String activeProfile;
@@ -31,7 +31,7 @@ public class SSMSConfig implements WebMvcConfigurer {
     private String appName;
 
     @Autowired
-    SSMSProps SSMSProps;
+    com.ssms.common.config.ssmsProps ssmsProps;
 
     @Bean
     public ModelMapper modelMapper() {
@@ -46,9 +46,9 @@ public class SSMSConfig implements WebMvcConfigurer {
     @Bean
     public SentryClient sentryClient() {
 
-        SentryClient sentryClient = Sentry.init(SSMSProps.getSentryDsn());
+        SentryClient sentryClient = Sentry.init(ssmsProps.getSentryDsn());
         sentryClient.setEnvironment(activeProfile);
-        sentryClient.setRelease(SSMSProps.getDeployEnv());
+        sentryClient.setRelease(ssmsProps.getDeployEnv());
         sentryClient.addTag("service", appName);
 
         return sentryClient;

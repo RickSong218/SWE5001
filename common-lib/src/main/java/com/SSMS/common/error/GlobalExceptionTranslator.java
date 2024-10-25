@@ -128,8 +128,8 @@ public class GlobalExceptionTranslator {
                 .build();
     }
 
-    @ExceptionHandler(ServiceException.class)
-    public BaseResponse handleError(ServiceException e) {
+    @ExceptionHandler(com.ssms.common.error.ServiceException.class)
+    public BaseResponse handleError(com.ssms.common.error.ServiceException e) {
         logger.error("Service Exception", e);
         return BaseResponse
                 .builder()

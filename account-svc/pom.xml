@@ -4,18 +4,18 @@
     xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
- 
+
     <parent>
         <groupId>com.ssms</groupId>
         <artifactId>ssms-parent</artifactId>
         <version>1.0</version>
     </parent>
- 
-    <artifactId>account-svc</artifactId>
+
+    <artifactId>company-svc</artifactId>
+    <name>SSMS-Company-Svc</name>
     <version>1.0.0</version>
-    <name>ssms-Account-Svc</name>
-    <url>https://www.ssms.xyz</url>
- 
+    <url>https://www.SSMS.com</url>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -40,34 +40,24 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>io.intercom</groupId>
-            <artifactId>intercom-java</artifactId>
-            <version>2.8.0</version>
-        </dependency>
-        <dependency>
             <groupId>com.ssms</groupId>
             <artifactId>common-lib</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.ssms</groupId>
-            <artifactId>account-api</artifactId>
-            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>com.ssms</groupId>
             <artifactId>company-api</artifactId>
             <version>1.0.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.ssms</groupId>
-            <artifactId>mail-api</artifactId>
-            <version>1.0.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.ssms</groupId>
+<!--        <dependency>
+            <groupId>com.SSMS</groupId>
+            <artifactId>account-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>-->
+<!--        <dependency>
+            <groupId>com.SSMS</groupId>
             <artifactId>bot-api</artifactId>
             <version>1.0.0</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
     <build>
         <plugins>

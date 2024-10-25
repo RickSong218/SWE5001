@@ -4,7 +4,7 @@ import javax.validation.Constraint;
 import java.lang.annotation.*;
 
 @Documented
-@Constraint(validatedBy = DayOfWeekValidator.class)
+@Constraint(validatedBy = com.ssms.common.validation.DayOfWeekValidator.class)
 @Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface DayOfWeek {

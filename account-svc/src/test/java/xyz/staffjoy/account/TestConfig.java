@@ -1,4 +1,4 @@
-package com.ssms.account;
+package com.ssms.company;
 
 import feign.RequestInterceptor;
 import feign.RequestTemplate;

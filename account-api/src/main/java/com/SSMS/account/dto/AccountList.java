@@ -1,4 +1,4 @@
-package com.ssms.account.dto;
+package com.ssms.company.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,8 +11,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class AccountList {
-    private List<AccountDto> accounts;
+public class CompanyList {
+    private List<CompanyDto> companies;
     private int limit;
     private int offset;
 }

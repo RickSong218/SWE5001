@@ -1,11 +1,10 @@
-package com.ssms.account.dto;
+package com.ssms.company.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 
@@ -13,10 +12,13 @@ import javax.validation.constraints.NotEmpty;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class EmailChangeRequest {
+public class CreateJobRequest {
     @NotBlank
-    private String userId;
-    @NotEmpty
-    @Email
-    private String email;
+    private String companyId;
+    @NotBlank
+    private String teamId;
+    @NotBlank
+    private String name;
+    @NotBlank
+    private String color;
 }

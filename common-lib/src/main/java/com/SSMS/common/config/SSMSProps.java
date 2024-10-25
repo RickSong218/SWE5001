@@ -13,7 +13,7 @@ import javax.validation.constraints.NotBlank;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class SSMSProps {
+public class ssmsProps {
     @NotBlank
     private String sentryDsn;
     @NotBlank

@@ -1,4 +1,4 @@
-package com.ssms.account.config;
+package com.ssms.company.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,7 +18,7 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.ssms.account.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.ssms.company.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiEndPointsInfo())
@@ -26,8 +26,8 @@ public class SwaggerConfig {
     }
 
     private ApiInfo apiEndPointsInfo() {
-        return new ApiInfoBuilder().title("Account REST API")
-                .description("ssms Account REST API")
+        return new ApiInfoBuilder().title("Company REST API")
+                .description("ssms Company REST API")
                 .contact(new Contact("bobo", "https://github.com/jskillcloud", "bobo@jskillcloud.com"))
                 .license("The MIT License")
                 .licenseUrl("https://opensource.org/licenses/MIT")

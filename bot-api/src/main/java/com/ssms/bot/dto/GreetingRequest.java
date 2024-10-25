@@ -1,17 +1,15 @@
-package com.SSMS.bot.dto;
+package com.ssms.company.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.NotBlank;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class GreetingRequest {
-    @NotBlank
-    private String userId;
+public class ScheduledPerWeek {
+    private String week;
+    private int count;
 }

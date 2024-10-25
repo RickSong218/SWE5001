@@ -1,24 +1,29 @@
-package com.SSMS.bot.dto;
+package com.ssms.company.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.SSMS.company.dto.ShiftDto;
+import java.time.Instant;
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
-public class AlertChangedShiftRequest {
+public class BulkPublishShiftsRequest {
     @NotBlank
+    private String companyId;
+    @NotBlank
+    private String teamId;
     private String userId;
+    private String jobId;
     @NotNull
-    private ShiftDto oldShift;
+    private Instant shiftStartAfter;
     @NotNull
-    private ShiftDto newShift;
+    private Instant shiftStartBefore;
+    private boolean published;
 }
+

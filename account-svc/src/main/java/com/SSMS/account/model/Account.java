@@ -1,4 +1,4 @@
-package com.ssms.account.model;
+package com.ssms.company.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,16 +16,15 @@ import java.time.Instant;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Account {
+public class Shift {
     @Id
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
     @GeneratedValue(generator = "system-uuid")
     private String id;
-    private String name;
-    private String email;
-    private boolean confirmedAndActive;
-    private Instant memberSince;
-    private boolean support;
-    private String phoneNumber;
-    private String photoUrl;
+    private String teamId;
+    private Instant start;
+    private Instant stop;
+    private String userId;
+    private String jobId;
+    private boolean published;
 }
