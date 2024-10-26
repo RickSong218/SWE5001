@@ -1,4 +1,4 @@
-FROM java:8-jdk-alpine
+FROM openjdk:8-jdk-alpine
 
 COPY ./target/account-svc-1.0.0.jar /usr/app/
 

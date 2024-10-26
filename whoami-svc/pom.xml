@@ -12,7 +12,7 @@
     </parent>
 
     <artifactId>whoami-svc</artifactId>
-    <name>Ssms-WhoAmI-Svc</name>
+    <name>ssms-WhoAmI-Svc</name>
     <version>1.0.0</version>
     <description>WhoAmI project for ssms MicroServices demo</description>
 

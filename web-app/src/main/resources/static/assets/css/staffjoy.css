@@ -3196,139 +3196,6 @@ h5 {
       .footer__item:last-child {
         margin-bottom: 0; } }
 
-.mission {
-  background: #48b7ab;
-  padding: 40px 10% 65px;
-  text-align: center;
-  color: #fff; }
-  .mission img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 40px; }
-  .mission h1 {
-    font-size: 37px;
-    margin-bottom: 20px; }
-  .mission h3 {
-    font-size: 21px; }
-
-.story {
-  text-align: center;
-  margin-top: 70px; }
-  .story h2 {
-    margin-bottom: 30px; }
-  .story p {
-    margin-bottom: 60px;
-    font-size: 16px; }
-  .story:after {
-    content: ' ';
-    position: absolute;
-    left: 20%;
-    width: 60%;
-    height: 1px;
-    background: rgba(192, 192, 191, 0.3); }
-  @media (min-width: 480px) {
-    .story {
-      padding: 0 15%; } }
-
-.team {
-  margin-top: 130px;
-  margin-bottom: 100px;
-  padding: 0 5% 0;
-  text-align: center; }
-  .team img {
-    border-radius: 50%;
-    height: 125px;
-    width: 125px;
-    margin-bottom: 10px; }
-  .team h2 {
-    margin-bottom: 30px; }
-  .team h3 {
-    font-size: 21px;
-    font-weight: 700; }
-  .team h4 {
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 6px; }
-  .team p {
-    padding: 0px 5px;
-    text-align: left; }
-
-#careers h2 {
-  text-align: center; }
-
-#careers .thin-line-below:after {
-  content: ' ';
-  position: absolute;
-  left: 20%;
-  width: 60%;
-  height: 1px;
-  background: rgba(192, 192, 191, 0.3); }
-
-#careers .banner {
-  background: #48b7ab;
-  text-align: center;
-  color: #fff;
-  padding: 40px 0 65px;
-  margin-bottom: 40px; }
-  #careers .banner h1 {
-    margin-bottom: 20px; }
-
-#careers .workplace {
-  padding: 0 5%;
-  text-align: center; }
-  #careers .workplace .gallery {
-    margin-bottom: 40px; }
-  #careers .workplace img {
-    max-width: 100%; }
-
-#careers .benefits {
-  padding: 0% 5%;
-  margin-top: 90px;
-  margin-bottom: 40px; }
-  #careers .benefits .benefit {
-    width: 95%; }
-    #careers .benefits .benefit i {
-      color: #48b7ab;
-      margin-right: 10px; }
-      #careers .benefits .benefit i.less-margin {
-        margin-right: 5px; }
-      #careers .benefits .benefit i.more-margin {
-        margin-right: 15px; }
-    #careers .benefits .benefit p {
-      margin-left: 35px; }
-
-#careers .positions {
-  margin-bottom: 35px; }
-  #careers .positions .email-us {
-    text-align: center; }
-    #careers .positions .email-us a {
-      color: #48b7ab; }
-  #careers .positions .position {
-    width: 100%;
-    margin-bottom: 40px; }
-    #careers .positions .position .card-title {
-      background: #48b7ab;
-      padding: 16px 16px;
-      color: #fff; }
-      #careers .positions .position .card-title .position-title {
-        margin-bottom: 10px; }
-      #careers .positions .position .card-title .location {
-        display: block;
-        margin: 0; }
-    #careers .positions .position .text-section {
-      margin-bottom: 5px; }
-      #careers .positions .position .text-section h4 {
-        margin-bottom: 10px; }
-      #careers .positions .position .text-section ul {
-        list-style: disc;
-        margin-left: 20px; }
-        #careers .positions .position .text-section ul.child {
-          list-style: circle; }
-    #careers .positions .position .mdl-card__actions {
-      padding-left: 3%; }
-      #careers .positions .position .mdl-card__actions button a {
-        color: #fff; }
-
 #login {
   background: #fff;
   color: #fff;
@@ -3399,7 +3266,7 @@ h5 {
       margin-bottom: 30px; } }
   @media (min-width: 1200px) {
     #login {
-      background: #48b7ab url("/assets/images/staffjoy-logos/login-logos.svg") no-repeat top right; }
+      background: #48b7ab; }
       #login .login-panel {
         background: #fff;
         min-width: 400px;
@@ -3413,134 +3280,17 @@ h5 {
 .policies h1, .policies h3 {
   margin-bottom: 20px; }
 
-.page-title {
-  background: #48b7ab; }
-  .page-title .mdl-cell {
-    margin: 0; }
-  .page-title .mdl-cell--12-col {
-    width: 100%; }
-  .page-title h1, .page-title h2, .page-title h3 {
-    color: #fff;
-    padding-top: 3%;
-    padding-bottom: 14%; }
-  .page-title h2 {
-    font-size: 50px; }
-  .page-title h3 {
-    font-size: 40px; }
-
-.plans {
-  margin-top: -10%;
-  margin-bottom: 90px; }
-  .plans .plan ul {
-    padding: 0px 50px;
-    list-style-type: disc;
-    margin-bottom: 120px; }
-    .plans .plan ul li {
-      padding-left: 15px;
-      color: #423a40;
-      font-size: 11pt; }
-  .plans .plan .button-container {
-    width: 100%;
-    position: absolute;
-    bottom: 16px;
-    text-align: center;
-    padding-right: 20px;
-    padding-left: 20px; }
-  .plans .plan .purple-house {
-    margin: auto;
-    margin-top: 0px;
-    margin-bottom: 30px; }
-  .plans .plan .fill-width {
-    width: 100%; }
-    .plans .plan .fill-width.disabled {
-      background-color: #91d4cd;
-      color: white; }
-      .plans .plan .fill-width.disabled:hover {
-        cursor: not-allowed; }
-    .plans .plan .fill-width.primary {
-      background-color: #48b7ab; }
-  .plans h2 {
-    margin-top: 32px;
-    margin-bottom: 19px;
-    font-size: 28pt;
-    color: #423a40;
-    font-weight: 300;
-    text-align: center; }
-  .plans .enterprise-plan h2 {
-    margin-bottom: 9px; }
-  .plans img {
-    margin-bottom: 30px; }
-  .plans .price {
-    font-size: 24px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.0;
-    letter-spacing: -1.4px;
-    color: #423a3f;
-    text-align: center; }
-  .plans .price-format {
-    text-align: center;
-    font-weight: 700;
-    color: #423a40;
-    margin-bottom: 31px; }
-  .plans .divider {
-    height: 0px;
-    width: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    background: #48b7ab;
-    margin-bottom: 40px; }
-
-.faqs h2 {
-  margin-bottom: 64px;
-  font-size: 48px;
-  font-weight: 300;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.0;
-  letter-spacing: -1px;
-  color: #423a3f; }
-
-.faqs .faq {
-  margin-bottom: 48px; }
-  .faqs .faq.mdl-cell {
-    margin-top: 0; }
-  .faqs .faq h3 {
-    font-size: 24px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.0;
-    letter-spacing: -1.4px;
-    color: #423a3f;
-    margin-bottom: 20px; }
-  .faqs .faq p {
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.75;
-    color: #423a3f;
-    width: 95%;
-    margin-bottom: 0; }
-
-.content-panel {
-  padding: 0% 5%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto; }
-
-@media (max-width: 480px) {
-  .page-title h1, .page-title h2, .faqs h1, .faqs h2 {
-    font-size: 50px; } }
-
 #sign-up {
   background: #48b7ab;
   color: #fff; }
   @media (min-width: 1200px) {
     #sign-up {
-      background: url("/assets/images/staffjoy-logos/right-icon-bg.svg"), url("/assets/images/staffjoy-logos/left-icon-bg.svg"), #48b7ab;
+      background: #48b7ab;
+      background-repeat: no-repeat, no-repeat;
+      background-position: top right, bottom left; } }
+  @media (max-width: 1200px) {
+    #sign-up {
+      background: #48b7ab;
       background-repeat: no-repeat, no-repeat;
       background-position: top right, bottom left; } }
   #sign-up .back-button {
@@ -3596,7 +3346,7 @@ h5 {
   color: #fff; }
   @media (min-width: 1200px) {
     #sign-up {
-      background: url("/assets/images/staffjoy-logos/right-icon-bg.svg"), url("/assets/images/staffjoy-logos/left-icon-bg.svg"), #48b7ab;
+      background: #48b7ab;
       background-repeat: no-repeat, no-repeat;
       background-position: top right, bottom left; } }
   #sign-up .back-button {
@@ -3662,7 +3412,7 @@ h5 {
   color: #fff; }
   @media (min-width: 1200px) {
     #confirm {
-      background: url("/assets/images/staffjoy-logos/right-icon-bg.svg"), url("/assets/images/staffjoy-logos/left-icon-bg.svg"), #48b7ab;
+      background: #48b7ab;
       background-repeat: no-repeat, no-repeat;
       background-position: top right, bottom left; } }
   #confirm .back-button {
@@ -3701,7 +3451,7 @@ h5 {
   color: #fff; }
   @media (min-width: 1200px) {
     #newCompany {
-      background: url("/assets/images/staffjoy-logos/right-icon-bg.svg"), url("/assets/images/staffjoy-logos/left-icon-bg.svg"), #48b7ab;
+      background: #48b7ab;
       background-repeat: no-repeat, no-repeat;
       background-position: top right, bottom left; } }
   #newCompany .back-button {

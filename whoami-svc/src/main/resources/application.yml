@@ -6,11 +6,11 @@ spring:
   application:
     name: whoami-service
 
-staffjoy:
+ssms:
   common:
-    sentry-dsn: ${SENTRY_DSN}
+    sentry-dsn: https://61ec95763d22ef304b11bc25b4b6d70f@o4508115831160832.ingest.us.sentry.io/4508115835420672
     deploy-env: ${DEPLOY:V2}
-  company-service-endpoint: ${COMPANY_SERVICE_ENDPOINT:http://company-service:8080}
-  account-service-endpoint: ${ACCOUNT_SERVICE_ENDPOINT:http://account-service:8080}
+  company-service-endpoint: http://company-service:8080
+  account-service-endpoint: http://account-service:8080
   intercom-app-id: ${INTERCOM_APP_ID}
   intercom-signing-secret: ${INTERCOM_SIGNING_SECRET}

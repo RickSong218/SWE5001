@@ -6,13 +6,13 @@ import org.springframework.context.annotation.Import;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import com.ssms.common.async.ContextCopyingDecorator;
-import com.ssms.common.config.StaffjoyWebConfig;
+import com.ssms.common.config.SSMSWebConfig;
 
 import java.util.concurrent.Executor;
 
 @Configuration
 @EnableAsync
-@Import(value = StaffjoyWebConfig.class)
+@Import(value = SSMSWebConfig.class)
 @SuppressWarnings(value = "Duplicates")
 public class AppConfig {
 

@@ -1,0 +1,156 @@
+version: '3.7'
+
+services:
+  account-service:
+    build: ./account-svc
+    image: ssms/account-svc
+    environment:
+      - SPRING_PROFILES_ACTIVE
+      - SERVER_PORT
+      - SIGNING_SECRET
+      - SENTRY_DSN
+      - EMAIL_SERVICE_ENDPOINT
+      - COMPANY_SERVICE_ENDPOINT
+      - BOT_SERVICE_ENDPOINT
+      - INTERCOM_ACCESS_TOKEN
+      - ACCOUNT_DATASOURCE_URL=jdbc:mysql://152.42.192.36:3306/ssms_account?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+      - ACCOUNT_DATASOURCE_USERNAME=root                                           # MySQL 用户名
+      - ACCOUNT_DATASOURCE_PASSWORD=451254                                        #  MySQL 密码
+    depends_on:
+      - bot-service
+      - email-service
+    networks:
+      - internal_access
+      - external_access # db access
+
+  company-service:
+    build: ./company-svc
+    image: ssms/company-svc
+    environment:
+      - SPRING_PROFILES_ACTIVE
+      - SERVER_PORT
+      - SIGNING_SECRET
+      - SENTRY_DSN
+      - EMAIL_SERVICE_ENDPOINT
+      - ACCOUNT_SERVICE_ENDPOINT
+      - BOT_SERVICE_ENDPOINT
+      - COMPANY_DATASOURCE_URL=jdbc:mysql://152.42.192.36:3306/ssms_account?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+      - COMPANY_DATASOURCE_USERNAME=root
+      - COMPANY_DATASOURCE_PASSWORD=451254
+    depends_on:
+      - bot-service
+      - email-service
+    networks:
+      - internal_access
+      - external_access # db access
+
+  bot-service:
+    build: ./bot-svc
+    image: ssms/bot-svc
+    environment:
+      - SPRING_PROFILES_ACTIVE
+      - SERVER_PORT
+      - SENTRY_DSN
+      - EMAIL_SERVICE_ENDPOINT
+      - ACCOUNT_SERVICE_ENDPOINT
+      - COMPANY_SERVICE_ENDPOINT
+      - SMS_SERVICE_ENDPOINT
+    depends_on:
+      - email-service
+  #      - sms-svc # commented for demo
+    networks:
+      - internal_access
+
+  email-service:
+    build: ./mail-svc
+    image: ssms/mail-svc
+    environment:
+      - SPRING_PROFILES_ACTIVE
+      - SERVER_PORT
+      - SENTRY_DSN
+      - ALIYUN_ACCESS_KEY
+      - ALIYUN_ACCESS_SECRET
+    networks:
+      - internal_access
+      - external_access # aliyun access
+
+  whoami-service:
+    build: ./whoami-svc
+    image: ssms/whoami-svc
+    environment:
+      - SPRING_PROFILES_ACTIVE
+      - SERVER_PORT
+      - SENTRY_DSN
+      - INTERCOM_APP_ID
+      - INTERCOM_SIGNING_SECRET
+      - ACCOUNT_SERVICE_ENDPOINT
+      - COMPANY_SERVICE_ENDPOINT
+    depends_on:
+      - account-service
+      - company-service
+    networks:
+      - internal_access
+
+  www-service:
+    build: ./web-app
+    image: ssms/www-svc
+    environment:
+      - SPRING_PROFILES_ACTIVE
+      - SERVER_PORT
+      - SENTRY_DSN
+      - SIGNING_SECRET
+      - ACCOUNT_SERVICE_ENDPOINT
+      - COMPANY_SERVICE_ENDPOINT
+      - EMAIL_SERVICE_ENDPOINT
+      - RECAPTCHA_PUBLIC
+      - RECAPTCHA_PRIVATE
+    depends_on:
+      - account-service
+      - company-service
+      - email-service
+    networks:
+      - internal_access
+
+  faraday-service:
+    build: ./faraday
+    image: ssms/faraday-svc
+    ports:
+      - 80:80
+    environment:
+      - SPRING_PROFILES_ACTIVE
+      - SERVER_PORT
+      - SENTRY_DSN
+      - SIGNING_SECRET
+    depends_on:
+      - account-service
+      - company-service
+      - www-service
+      - whoami-service
+      - myaccount-service
+      - app-service
+    networks:
+      - internal_access
+      - external_access
+
+
+  myaccount-service:
+    build:
+      context: ./frontend
+      dockerfile: myaccount/Dockerfile
+    image: ssms/myaccount-spa
+    networks:
+      - internal_access
+
+  app-service:
+    build:
+      context: ./frontend
+      dockerfile: app/Dockerfile
+    image: ssms/app-spa
+    networks:
+      - internal_access
+
+networks:
+  internal_access:
+    internal: true
+  external_access:
+

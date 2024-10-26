@@ -1,21 +1,21 @@
 {
   "groups": [
     {
-      "name": "SSMS.common",
-      "type": "com.SSMS.common.config.SSMSProps",
-      "sourceType": "com.SSMS.common.config.SSMSProps"
+      "name": "ssms.common",
+      "type": "com.ssms.common.config.SSMSProps",
+      "sourceType": "com.ssms.common.config.SSMSProps"
     }
   ],
   "properties": [
     {
-      "name": "SSMS.common.deploy-env",
+      "name": "ssms.common.deploy-env",
       "type": "java.lang.String",
-      "sourceType": "com.SSMS.common.config.SSMSProps"
+      "sourceType": "com.ssms.common.config.SSMSProps"
     },
     {
-      "name": "SSMS.common.sentry-dsn",
+      "name": "ssms.common.sentry-dsn",
       "type": "java.lang.String",
-      "sourceType": "com.SSMS.common.config.SSMSProps"
+      "sourceType": "com.ssms.common.config.SSMSProps"
     }
   ],
   "hints": []

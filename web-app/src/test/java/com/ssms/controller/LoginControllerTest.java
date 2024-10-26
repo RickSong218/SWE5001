@@ -1,5 +1,6 @@
 package com.ssms.controller;
 
+import com.ssms.account.dto.*;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,7 +12,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import com.ssms.account.client.AccountClient;
-import com.ssms.account.dto.*;
 import com.ssms.common.api.BaseResponse;
 import com.ssms.common.api.ResultCode;
 import com.ssms.common.auth.AuthConstant;

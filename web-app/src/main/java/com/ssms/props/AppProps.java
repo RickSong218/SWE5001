@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import javax.validation.constraints.NotNull;
 
 @Component
-@ConfigurationProperties(prefix="staffjoy")
+@ConfigurationProperties(prefix="ssms")
 @Data
 @Builder
 @NoArgsConstructor

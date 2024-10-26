@@ -12,7 +12,7 @@
     </parent>
 
     <artifactId>whoami-api</artifactId>
-    <name>Ssms-WhoAmI-API</name>
+    <name>ssms-WhoAmI-API</name>
     <version>1.0.0</version>
     <description>WhoAmI API/DTO for sharing between Client/Server</description>
 
