@@ -35,10 +35,12 @@
         <dependency>
             <groupId>structlog4j</groupId>
             <artifactId>structlog4j-api</artifactId>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>structlog4j</groupId>
             <artifactId>structlog4j-json</artifactId>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.modelmapper</groupId>
