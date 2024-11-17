@@ -17,21 +17,21 @@
         <spring.cloud.version>Greenwich.RELEASE</spring.cloud.version>
     </properties>
  
-    <modules>
-        <module>common-lib</module>
-        <module>account-svc</module>
-        <module>account-api</module>
-        <module>company-api</module>
-        <module>company-svc</module>
-        <module>mail-api</module>
-        <module>mail-svc</module>
-        <module>bot-api</module>
-        <module>bot-svc</module>
-        <module>whoami-api</module>
-        <module>whoami-svc</module>
-        <module>web-app</module>
-        <module>faraday</module>
-    </modules>
+    <!--<modules>-->
+    <!--    <module>common-lib</module>-->
+    <!--    <module>account-svc</module>-->
+    <!--    <module>account-api</module>-->
+    <!--    <module>company-api</module>-->
+    <!--    <module>company-svc</module>-->
+    <!--    <module>mail-api</module>-->
+    <!--    <module>mail-svc</module>-->
+    <!--    <module>bot-api</module>-->
+    <!--    <module>bot-svc</module>-->
+    <!--    <module>whoami-api</module>-->
+    <!--    <module>whoami-svc</module>-->
+    <!--    <module>web-app</module>-->
+    <!--    <module>faraday</module>-->
+    <!--</modules>-->
 
     <dependencyManagement>
         <dependencies>
@@ -100,7 +100,7 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
-            <version>1.18.8</version>
+            <version>1.18.26</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -123,6 +123,13 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <dependency>
+            <groupId>javax.json</groupId>
+            <artifactId>javax.json-api</artifactId>
+            <version>1.1.4</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -199,30 +206,30 @@
     </build>
 
     <repositories>
-        <repository>
-            <id>aliyun-repos</id>
-            <url>https://maven.aliyun.com/nexus/content/groups/public/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <!--https://github.com/jacek99/structlog4j-->
-        <repository>
-            <id>jcenter</id>
-            <url>https://jcenter.bintray.com</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
+        <!--<repository>-->
+        <!--    <id>aliyun-repos</id>-->
+        <!--    <url>https://maven.aliyun.com/nexus/content/groups/public/</url>-->
+        <!--    <snapshots>-->
+        <!--        <enabled>false</enabled>-->
+        <!--    </snapshots>-->
+        <!--</repository>-->
+        <!--&lt;!&ndash;https://github.com/jacek99/structlog4j&ndash;&gt;-->
+        <!--<repository>-->
+        <!--    <id>jcenter</id>-->
+        <!--    <url>https://jcenter.bintray.com</url>-->
+        <!--    <snapshots>-->
+        <!--        <enabled>false</enabled>-->
+        <!--    </snapshots>-->
+        <!--</repository>-->
     </repositories>
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>aliyun-plugin</id>
-            <url>https://maven.aliyun.com/nexus/content/groups/public/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
+    <!--<pluginRepositories>-->
+    <!--    <pluginRepository>-->
+    <!--        <id>aliyun-plugin</id>-->
+    <!--        <url>https://maven.aliyun.com/nexus/content/groups/public/</url>-->
+    <!--        <snapshots>-->
+    <!--            <enabled>false</enabled>-->
+    <!--        </snapshots>-->
+    <!--    </pluginRepository>-->
+    <!--</pluginRepositories>-->
 </project>
